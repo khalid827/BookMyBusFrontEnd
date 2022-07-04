@@ -8,15 +8,17 @@ import { Observable } from 'rxjs';
 })
 export class AuthenticationService {
 
-  source1 = '';
-  destination1 = '';
+  departureLocation1='';
+  arrivalLocation1= '';
+  
 
   private baseUrl = 'http://localhost:8086/airindia/api/user';
+  private baseUrl1='http://localhost:9090/bus/usd/findallUsers';
 
   constructor(private http:HttpClient) { }
 
-  getDealersList(): Observable<any> {
-    return this.http.get(`${this.baseUrl}`);
+  getUserList(): Observable<any> {
+    return this.http.get(`${this.baseUrl1}`);
   }
 
   login(user:any):Observable<any>

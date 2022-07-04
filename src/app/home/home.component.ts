@@ -8,6 +8,8 @@ import { FlightService } from '../flight.service';
 import { AuthenticationService } from '../authentication.service';
 import { asLiteral } from '@angular/compiler/src/render3/view/util';
 import { FlightDetails } from '../flight-details';
+import { BusServiceService } from '../bus-service.service';
+import { Bus } from '../bus';
 
 @Component({
   selector: 'app-home',
@@ -65,18 +67,18 @@ export class HomeComponent implements OnInit {
  
   City: any = ['Bangalore','Chennai', 'Delhi', 'Kolkatta','Mumbai', ]
  
-  flight: FlightDetails = new FlightDetails();
+  bus: Bus = new Bus();
   
   constructor(private formBuilder: FormBuilder,
               private authenticationService: AuthenticationService,
-              private fService: FlightService,
+              private bService: BusServiceService,
               private router: Router) { }
 
   ngOnInit(): void {
 
     this.registerForm = this.formBuilder.group({
-      source: ['',[ Validators.required,Validators.pattern('^[a-zA-Z]+$')]],
-      destination: ['',[ Validators.required,Validators.pattern('^[a-zA-Z]+$')]],
+      arrivalLocation: ['',[ Validators.required,Validators.pattern('^[a-zA-Z]+$')]],
+      departureLocation: ['',[ Validators.required,Validators.pattern('^[a-zA-Z]+$')]],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
       date: ['', [Validators.required]],
@@ -97,14 +99,14 @@ export class HomeComponent implements OnInit {
 
   DealerAddress(): void {
     this.submitted = false;
-    this.flight= new FlightDetails();
+    this.bus= new Bus();
   }
 
   
   onSubmit() {
 
     this.submitted = true;
-    this.flight=this.registerForm.value;
+    this.bus=this.registerForm.value;
     // stop the process here if form is invalid
     //if (this.registerForm.invalid) {
       //  return;
@@ -120,24 +122,23 @@ export class HomeComponent implements OnInit {
   }
 
   search() {
-    alert(this.flight.source+" "+this.flight.destination);
+    alert(this.bus.arrivalLocation+" "+this.bus.departureLocation);
     /*this.authenticationService.saveDealer(this.flight)
     .subscribe(data => console.log(data), error => console.log(error));
     this.flight= new FlightDetails();*/
 
-    this.fService.source = this.flight.source;
-    this.fService.destination = this.flight.destination;
-    this.authenticationService.source1 = this.flight.source;
-    this.authenticationService.destination1 = this.flight.destination;
-    this.fService.date = this.flight.date;
-    this.fService.passengers = this.flight.passengers;
+    this.bService.departureLocation = this.bus.departureLocation;
+    this.bService.arrivalLocation = this.bus.arrivalLocation;
+    this.authenticationService.departureLocation1 = this.bus.departureLocation;
+    this.authenticationService.arrivalLocation1 = this.bus.arrivalLocation;
+    this.bService.date = this.bus.date;
 
     this.gotoList();
   }
 
   gotoList() {
 
-    this.router.navigate(['/fdetails']);
+    this.router.navigate(['/bdetails']);
 
     /*if(this.authenticationService.isUserLoggedIn()){
     this.router.navigate(['/fdetails']);
