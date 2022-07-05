@@ -42,7 +42,7 @@ export class AddbusComponent implements OnInit {
   }
  
   gotoList() {
-    this.router.navigate(['/addBus']).then(() => {
+    this.router.navigate(['/showbuses']).then(() => {
       window.location.reload();
     });
   }

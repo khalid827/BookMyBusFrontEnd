@@ -1,13 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Flight } from '../flight';
-import { Observable } from 'rxjs';
+
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { FlightService } from '../flight.service';
+
 import { AuthenticationService } from '../authentication.service';
-import { asLiteral } from '@angular/compiler/src/render3/view/util';
-import { FlightDetails } from '../flight-details';
 import { BusServiceService } from '../bus-service.service';
 import { Bus } from '../bus';
 

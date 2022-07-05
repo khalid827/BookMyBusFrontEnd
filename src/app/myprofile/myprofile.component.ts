@@ -13,11 +13,22 @@ import { User } from '../user';
 })
 export class MyprofileComponent implements OnInit {
 
-  
+  email:string|any;
+  userprof:Userdetails|any;
+  //username=sessionStorage.getItem('username');
 
   constructor(private route:ActivatedRoute,private router:Router,private authService:AuthenticationService) { }
 
   ngOnInit(): void {
+    this.userprof=new Userdetails();
+    
+    this.email=sessionStorage.getItem('username');
+
+    this.authService.userProfile(this.email)
+     .subscribe(data => {
+       console.log(data)
+       this.userprof = data;
+     }, error => console.log(error));
    
   }
 

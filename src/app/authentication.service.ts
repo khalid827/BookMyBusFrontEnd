@@ -12,7 +12,8 @@ export class AuthenticationService {
   arrivalLocation1= '';
   
 
-  private baseUrl = 'http://localhost:8086/airindia/api/user';
+
+  private baseUrl='http://localhost:9090/bus/usd/getuserdetails';
   private baseUrl1='http://localhost:9090/bus/usd/findallUsers';
   private baseUrl3='http://localhost:9090/bus/usd/getuserdetails';
 
@@ -53,7 +54,12 @@ export class AuthenticationService {
     sessionStorage.removeItem('username')
   }
 
-  saveDealer(user: Object): Observable<Object> {
-    return this.http.post(`http://localhost:8086/airindia/api/flight`, user);
+  saveUser(user: Object): Observable<Object> {
+    return this.http.post(`http://localhost:9090/bus/usd/registerUser`, user);
+  }
+
+  userProfile(email:string):Observable<any>
+  {
+    return this.http.get(`${this.baseUrl}/${email}`)
   }
 }

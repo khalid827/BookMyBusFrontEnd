@@ -11,14 +11,14 @@
             
         </thead>
         <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+            <tr *ngFor="let book of bookinglist|async">
+                <td>{{ book.id}}</td>
+                <td>{{ book.dateOfBooking}}</td>
+                <td>{{ book.passengerName}}</td>
+                <td>{{ book.departureLocation}}</td>
+                <td>{{ book.arrivalLocation}}</td>
+                <td>{{ book.busType}}</td>
+                <td>{{ book.totalCost}}</td>
                 
             </tr>
         </tbody>
