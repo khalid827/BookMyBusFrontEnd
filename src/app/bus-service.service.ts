@@ -14,6 +14,7 @@ export class BusServiceService {
 
 
   baseUrl='http://localhost:9090/bus/details/createbus';
+  baseUrl1='http://localhost:9090/bus/details/getbybusId';
 
   constructor(private http:HttpClient) { }
 
@@ -29,6 +30,15 @@ export class BusServiceService {
   deleteBus(id:string):Observable<any>
   {
     return this.http.delete(`${this.baseUrl}/${id}`,{responseType:'text'});
+  }
+
+  getBus(id:string):Observable<any>{
+    return this.http.get(`${this.baseUrl1}/${id}`)
+  }
+
+  updateBus(id:string,value:any):Observable<Object>
+  {
+    return this.http.put(`${this.baseUrl}/${id}`,value);
   }
 }
 

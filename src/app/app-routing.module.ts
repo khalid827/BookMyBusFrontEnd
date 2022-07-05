@@ -27,6 +27,8 @@ import { AddbusComponent } from './addbus/addbus.component';
 import { UpdatebusComponent } from './updatebus/updatebus.component';
 import { DeletebusComponent } from './deletebus/deletebus.component';
 import { ShowbookingsComponent } from './showbookings/showbookings.component';
+import { AdminBusComponent } from './admin-bus/admin-bus.component';
+
 
 
 
@@ -55,7 +57,9 @@ const routes: Routes = [
   {path: 'showusers', component: ShowusersComponent},
   {path: 'showbuses', component: ShowbusesComponent},
   {path: 'addbus', component: AddbusComponent},
-  {path: 'showbookings', component: ShowbookingsComponent}
+  {path: 'showbookings', component: ShowbookingsComponent},
+  { path: 'details/:id',component:AdminBusComponent},
+  { path: 'update/:id',component:UpdatebusComponent}
   
   
 ];

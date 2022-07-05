@@ -14,11 +14,17 @@ export class AuthenticationService {
 
   private baseUrl = 'http://localhost:8086/airindia/api/user';
   private baseUrl1='http://localhost:9090/bus/usd/findallUsers';
+  private baseUrl3='http://localhost:9090/bus/usd/getuserdetails';
 
   constructor(private http:HttpClient) { }
 
   getUserList(): Observable<any> {
     return this.http.get(`${this.baseUrl1}`);
+  }
+
+  getUserDetails(email:any):Observable<any>
+  {
+    return this.http.get(`${this.baseUrl3}/${email}`);
   }
 
   login(user:any):Observable<any>

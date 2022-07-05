@@ -37,6 +37,7 @@ import { AddbusComponent } from './addbus/addbus.component';
 import { UpdatebusComponent } from './updatebus/updatebus.component';
 import { DeletebusComponent } from './deletebus/deletebus.component';
 import { UpdateprofileComponent } from './updateprofile/updateprofile.component';
+import { AdminBusComponent } from './admin-bus/admin-bus.component';
 
 
 @NgModule({
@@ -73,6 +74,7 @@ import { UpdateprofileComponent } from './updateprofile/updateprofile.component'
     UpdatebusComponent,
     DeletebusComponent,
     UpdateprofileComponent,
+    AdminBusComponent,
     
   ],
   imports: [

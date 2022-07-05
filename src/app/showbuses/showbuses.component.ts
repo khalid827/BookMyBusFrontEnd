@@ -25,16 +25,16 @@ export class ShowbusesComponent implements OnInit {
     this.buses=this.bService.getBusesList();
   }
 
- /* productDetails(id:string)
+  busDetails(id:string)
   {
     this.router.navigate(['details',id])
   }
 
-  editProduct(id:string)
+  editBus(id:string)
   {
     this.router.navigate(['update',id]);  //navigate to component from method
   }
-*/
+
   deleteBus(id: string) {
     this.bService.deleteBus(id)
       .subscribe(

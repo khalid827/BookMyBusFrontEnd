@@ -1,0 +1,36 @@
+<h2>Bus Details</h2> 
+ 
+<hr/>
+<div *ngIf="bus">
+    <div>
+        <label><b>Bus Id: </b></label> {{bus.id}}
+      </div>
+  <div>
+    <label><b>Bus No: </b></label> {{bus.busNo}}
+  </div>
+  <div>
+    <label><b>Departure Location: </b></label> {{bus.departureLocation}}
+  </div>
+  <div>
+    <label><b>Arrival Location: </b></label> {{bus.arrivalLocation}}
+  </div>  
+  <div>
+    <label><b>Departure Time: </b></label> {{bus.departureTime}}
+  </div>  
+  <div>
+    <label><b>Arrival Time: </b></label> {{bus.arrivalTime}}
+  </div> 
+  <div>
+    <label><b>Bus Type: </b></label> {{bus.busType}}
+  </div> 
+  <div>
+    <label><b>Price: </b></label> {{bus.price}}
+  </div> 
+  <div>
+    <label><b>Driver Contact: </b></label> {{bus.driverContact}}
+  </div> 
+</div>
+ 
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Bus List</button><br>
