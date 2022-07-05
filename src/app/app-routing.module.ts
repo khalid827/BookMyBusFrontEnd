@@ -28,6 +28,8 @@ import { UpdatebusComponent } from './updatebus/updatebus.component';
 import { DeletebusComponent } from './deletebus/deletebus.component';
 import { ShowbookingsComponent } from './showbookings/showbookings.component';
 import { AdminBusComponent } from './admin-bus/admin-bus.component';
+import { FeedbackComponent } from './feedback/feedback.component';
+import { ShowfeedbacksComponent } from './showfeedbacks/showfeedbacks.component';
 
 
 
@@ -59,7 +61,8 @@ const routes: Routes = [
   {path: 'addbus', component: AddbusComponent},
   {path: 'showbookings', component: ShowbookingsComponent},
   { path: 'details/:id',component:AdminBusComponent},
-  { path: 'update/:id',component:UpdatebusComponent}
+  { path: 'update/:id',component:UpdatebusComponent},
+  { path: 'feedbacks', component: FeedbackComponent},
   
   
 ];

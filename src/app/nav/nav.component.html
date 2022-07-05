@@ -1,8 +1,8 @@
-<nav class="navbar navbar-expand-sm bg-warning navbar-dark">
-    <!-- Links -->
-    <ul class="navbar-nav me-auto">
-      <img class="card-img" src="/assets/images/bus.jpeg" height="80px" width="80px">
-    </ul>
+<nav class="navbar navbar-expand-md  navbar-dark bg-light" >
+  <!-- Links -->
+  <a class="navbar-brand" routerLink="/">
+    <img src="/assets/images/BookMyBus.png" height="50" width="60">
+</a>
 
     <ul class="navbar-nav mx-auto">
       <li class="nav-item">
@@ -41,7 +41,7 @@
       </li>
 
       <li class="nav-item">
-        <a *ngIf="loginService.isUserLoggedIn()" routerLink="feedback" class="clickme info" routerLinkActive="active">Feedback</a>
+        <a *ngIf="loginService.isUserLoggedIn()" routerLink="/feedbacks" class="clickme info" routerLinkActive="active">Feedback</a>
       </li>
 
       

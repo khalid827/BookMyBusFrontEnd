@@ -1,3 +1,14 @@
-#image{
-    height: 110px;
+ul {
+    
+    position: absolute;
+    
 }
+    li {
+        float: left;
+        position: relative;
+        margin-right: 196px;
+        margin-top: 0px;
+        margin-left: 170px;
+    }
+
+    
