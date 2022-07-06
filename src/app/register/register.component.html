@@ -15,27 +15,6 @@
             <input type="text" class="form-control" id="name" required [(ngModel)]="userdetails.name" name="name">
         </div>
     
-        <!--<div class="form-group">
-          <label>Source</label>
-          <select class="custom-select d-block w-100" formControlName="source" [ngClass]="{ 'is-invalid': submitted && f.source.errors }">
-              <option value="">Choose...</option>
-              <option *ngFor="let source of City" [ngValue]="source">{{source}}</option>
-           </select>
-          <div *ngIf="submitted && f.source.errors" class="invalid-feedback">
-              <div *ngIf="f.source.errors.required">Source is required</div>
-          </div>
-        </div>-->
-    
-        <!--<div class="form-group">
-          <label>Destination</label>
-          <select class="custom-select d-block w-100" formControlName="destination" [ngClass]="{ 'is-invalid': submitted && f.destination.errors }">
-              <option value="">Choose...</option>
-              <option *ngFor="let destination of City" [ngValue]="destination">{{destination}}</option>
-           </select>
-          <div *ngIf="submitted && f.destination.errors" class="invalid-feedback">
-              <div *ngIf="f.destination.errors.required">Destination is required</div>
-          </div>
-        </div>-->
      
         <div class="form-group">
             <label for="password">Password</label>

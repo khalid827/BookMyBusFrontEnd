@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Feedbackclass } from '../feedbackclass';
+import { FeedbackserviceService } from '../feedbackservice.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-showfeedbacks',
@@ -7,9 +11,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShowfeedbacksComponent implements OnInit {
 
-  constructor() { }
+  showallfeedback:Observable<Feedbackclass[]> | any;
+
+  constructor(private showallfeedbackService:FeedbackserviceService,private router:Router) { }
 
   ngOnInit(): void {
+    this.reloadData();
+  }
+
+  reloadData()
+  {
+    this.showallfeedback=this.showallfeedbackService.getUserList();
+  }nInit(): void {
   }
 
 }

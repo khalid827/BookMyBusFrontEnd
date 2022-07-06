@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 
 import { AuthenticationService } from '../authentication.service';
 import { BusServiceService } from '../bus-service.service';
-import { Bus } from '../bus';
+
 import { BusDetails } from '../bus-details';
 
 @Component({
@@ -16,47 +16,6 @@ import { BusDetails } from '../bus-details';
 })
 export class HomeComponent implements OnInit {
 
-  /*products: Observable<Flight[]> | any;
-
-  registerForm: FormGroup | any;
-  product: Flight = new Flight();
-  submitted = false;
-
-  City: any = ['Bangalore','Chennai', 'Delhi', 'Kolkatta','Mumbai', ]
-
-  constructor(private flightService: FlightService,
-              private router: Router) { }
-
-  ngOnInit(): void {
-  }
-  
-
-  get f() { return this.registerForm.controls; }
-
-  newProduct(): void {
-    this.submitted = false;
-    //this.product= new Flight();
-  }
- 
-  save() {
-    alert(this.product);
-    this.flightService.newFlight(this.product)
-      .subscribe(data => console.log(data), error => console.log(error));
-    this.product= new Flight();
-    this.gotoList();
-  }
- 
-  onSubmit() {
-    this.submitted = true;
-    this.save();
-    this.gotoList();    
-  }
- 
-  gotoList() {
-    this.router.navigate(['/fdetails']).then(() => {
-      window.location.reload();
-    });
-  }*/
 
 
 
@@ -95,10 +54,6 @@ export class HomeComponent implements OnInit {
     })
   }
 
-  DealerAddress(): void {
-    this.submitted = false;
-    this.bus= new BusDetails();
-  }
 
   
   onSubmit() {
@@ -139,12 +94,6 @@ export class HomeComponent implements OnInit {
 
     this.router.navigate(['/search']);
 
-    /*if(this.authenticationService.isUserLoggedIn()){
-    this.router.navigate(['/fdetails']);
-    }
-    else{
-      this.router.navigate(['/login']);
-    }*/
   }
 
 }

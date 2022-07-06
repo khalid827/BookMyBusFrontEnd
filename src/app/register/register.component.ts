@@ -49,10 +49,5 @@ export class RegisterComponent implements OnInit {
     });
   }
 
-  gotoList1() {
-    this.router.navigate(['/deleteflight']).then(() => {
-      window.location.reload();
-    });
-  }
 
 }

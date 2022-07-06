@@ -24,7 +24,7 @@ export class AddbusComponent implements OnInit {
 
   get f() { return this.registerForm.controls; }
 
-  newProduct(): void {
+  newBus(): void {
     this.submitted = false;
     this.bus= new Bus();
   }
@@ -47,9 +47,4 @@ export class AddbusComponent implements OnInit {
     });
   }
 
-  gotoList1() {
-    this.router.navigate(['/deleteflight']).then(() => {
-      window.location.reload();
-    });
-  }
 }

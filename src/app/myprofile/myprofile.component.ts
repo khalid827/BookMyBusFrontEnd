@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { Userdetails } from '../userdetails';
 import { AuthenticationService } from '../authentication.service';
 import { ActivatedRoute } from '@angular/router';
-import { User } from '../user';
+
 
 @Component({
   selector: 'app-myprofile',
@@ -31,5 +31,12 @@ export class MyprofileComponent implements OnInit {
      }, error => console.log(error));
    
   }
+
+  list()
+  {
+    this.email=sessionStorage.getItem('username'); 
+    this.router.navigate(['updateprofile',this.email]);
+  }
+
 
 }
