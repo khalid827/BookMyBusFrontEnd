@@ -11,15 +11,18 @@
             <td>Action</td>
         </thead>
         <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td> <button class="btn btn-info" routerLink="/booking">Book</button></td>
+            <tr *ngFor="let b of buses | async">
+
+                <td>{{b.busNo}}</td>
+                <td>{{b.busType}}</td>
+                <td>{{b.arrivalLocation}}</td>
+                <td>{{b.arrivalTime}}</td>
+                <td>{{b.departureTime}}</td>
+                <td>{{b.driverContact}}</td>
+                <td>{{b.price}}</td>
+                <td>
+                <button (click)="bookBus(b.id)" class="btn btn-info" style="margin-left: 10px">Book</button>
+                 </td>
             </tr>
         </tbody>
     </table>

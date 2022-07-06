@@ -39,7 +39,7 @@ const routes: Routes = [
   {path:'',redirectTo:'home',pathMatch:'full'},
   {path:'adminlogin', component:AdminLoginComponent},
   {path:'search', component:SearchComponent},
-  {path: 'booking', component: BookingComponent},
+  {path: 'booking/:id/:user', component: BookingComponent},
   {path:'home', component:HomeComponent},
   {path:'login', component:LoginComponent},
   {path:'logout', component:LogoutComponent},

@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 import { AuthenticationService } from '../authentication.service';
 import { BusServiceService } from '../bus-service.service';
 import { Bus } from '../bus';
+import { BusDetails } from '../bus-details';
 
 @Component({
   selector: 'app-home',
@@ -64,7 +65,7 @@ export class HomeComponent implements OnInit {
  
   City: any = ['Bangalore','Chennai', 'Delhi', 'Kolkatta','Mumbai', ]
  
-  bus: Bus = new Bus();
+  bus: BusDetails = new BusDetails();
   
   constructor(private formBuilder: FormBuilder,
               private authenticationService: AuthenticationService,
@@ -96,7 +97,7 @@ export class HomeComponent implements OnInit {
 
   DealerAddress(): void {
     this.submitted = false;
-    this.bus= new Bus();
+    this.bus= new BusDetails();
   }
 
   
@@ -119,23 +120,24 @@ export class HomeComponent implements OnInit {
   }
 
   search() {
-    alert(this.bus.arrivalLocation+" "+this.bus.departureLocation);
+    alert(" from "+this.bus.departureLocation+" to "+this.bus.arrivalLocation+" "+this.bus.date);
     /*this.authenticationService.saveDealer(this.flight)
     .subscribe(data => console.log(data), error => console.log(error));
     this.flight= new FlightDetails();*/
 
     this.bService.departureLocation = this.bus.departureLocation;
     this.bService.arrivalLocation = this.bus.arrivalLocation;
+    this.bService.date=this.bus.date;
     this.authenticationService.departureLocation1 = this.bus.departureLocation;
     this.authenticationService.arrivalLocation1 = this.bus.arrivalLocation;
-    this.bService.date = this.bus.date;
+    this.authenticationService.date1 = this.bus.date;
 
     this.gotoList();
   }
 
   gotoList() {
 
-    this.router.navigate(['/bdetails']);
+    this.router.navigate(['/search']);
 
     /*if(this.authenticationService.isUserLoggedIn()){
     this.router.navigate(['/fdetails']);

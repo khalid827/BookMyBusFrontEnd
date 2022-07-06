@@ -10,6 +10,7 @@ export class AuthenticationService {
 
   departureLocation1='';
   arrivalLocation1= '';
+  date1='';
   
 
 

@@ -8,13 +8,17 @@ import { Observable } from 'rxjs';
 })
 export class BusServiceService {
 
+  id=0;
   arrivalLocation ='';
   departureLocation='';
   date = '';
+  arrivalLocation1 ='';
+  departureLocation1='';
 
 
   baseUrl='http://localhost:9090/bus/details/createbus';
   baseUrl1='http://localhost:9090/bus/details/getbybusId';
+  baseUrl2='http://localhost:9090/bus/details/find';
 
   constructor(private http:HttpClient) { }
 
@@ -39,6 +43,10 @@ export class BusServiceService {
   updateBus(id:string,value:any):Observable<Object>
   {
     return this.http.put(`${this.baseUrl}/${id}`,value);
+  }
+
+  getBusBySearch(departureLocation: string, arrivalLocation: string,date:string): Observable<any> {
+    return this.http.get(`${this.baseUrl2}/${departureLocation}/${arrivalLocation}/${date}`);
   }
 }
 

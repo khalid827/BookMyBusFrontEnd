@@ -37,7 +37,7 @@
   
                 <div class="form-group">
                   <label>Source</label>
-                  <select class="custom-select d-block w-100" formControlName="source" [ngClass]="{ 'is-invalid': submitted && f.source.errors }">
+                  <select class="custom-select d-block w-100" formControlName="departureLocation" [ngClass]="{ 'is-invalid': submitted && f.source.errors }">
                       <option value="">select</option>
                       <option *ngFor="let city of City" [ngValue]="city">{{city}}</option>
                    </select>
@@ -48,7 +48,7 @@
   
               <div class="form-group">
                   <label>Destination</label>
-                  <select class="custom-select d-block w-100" formControlName="destination" [ngClass]="{ 'is-invalid': submitted && f.destination.errors }">
+                  <select class="custom-select d-block w-100" formControlName="arrivalLocation" [ngClass]="{ 'is-invalid': submitted && f.destination.errors }">
                       <option value="">select</option>
                       <option *ngFor="let city of City" [ngValue]="city">{{city}}</option>
                    </select>
@@ -74,7 +74,7 @@
                 </div>-->
                 <br>
                 <div class="form-group">
-                    <button class="btn btn-success"  routerLink="/search">Search</button>
+                    <button class="btn btn-success">Search</button>
                 </div>
             </form>
         </div>
