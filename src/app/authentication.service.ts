@@ -17,6 +17,7 @@ export class AuthenticationService {
   private baseUrl='http://localhost:9090/bus/usd/getuserdetails';
   private baseUrl1='http://localhost:9090/bus/usd/findallUsers';
   private baseUrl3='http://localhost:9090/bus/usd/getuserdetails';
+  private baseUrl4='http://localhost:9090/bus/usd/editdetails';
 
   constructor(private http:HttpClient) { }
 
@@ -62,5 +63,9 @@ export class AuthenticationService {
   userProfile(email:string):Observable<any>
   {
     return this.http.get(`${this.baseUrl}/${email}`)
+  }
+  updateUser(email:string,value:any):Observable<any>
+  {
+    return this.http.put(`${this.baseUrl4}/${email}`,value)
   }
 }

@@ -22,6 +22,8 @@ import { AdminBusComponent } from './admin-bus/admin-bus.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { ShowfeedbacksComponent } from './showfeedbacks/showfeedbacks.component';
 import { UpdateprofileComponent } from './updateprofile/updateprofile.component';
+import { PaymentComponent } from './payment/payment.component';
+import { CancelbookingComponent } from './cancelbooking/cancelbooking.component';
 
 
 
@@ -31,7 +33,7 @@ const routes: Routes = [
   {path:'',redirectTo:'home',pathMatch:'full'},
   {path:'adminlogin', component:AdminLoginComponent},
   {path:'search', component:SearchComponent},
-  {path: 'booking/:id/:user', component: BookingComponent},
+  {path: 'booking/:id', component: BookingComponent},
   {path:'home', component:HomeComponent},
   {path:'login', component:LoginComponent},
   {path:'logout', component:LogoutComponent},
@@ -49,7 +51,9 @@ const routes: Routes = [
   { path: 'update/:id',component:UpdatebusComponent},
   { path: 'feedbacks', component: FeedbackComponent},
   { path:'updateprofile/:email',component:UpdateprofileComponent},
-  { path: 'showfeedbacks',component:ShowfeedbacksComponent}
+  { path: 'showfeedbacks',component:ShowfeedbacksComponent},
+  { path: 'payment/:id/:user',component:PaymentComponent},
+  { path: 'cancelbooking',component:CancelbookingComponent}
   
   
 ];

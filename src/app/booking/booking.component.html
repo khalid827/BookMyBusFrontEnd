@@ -1,1 +1,24 @@
-<p>booking works!</p>
+<h3>Booking</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()" ngNativeValidate>
+    <div class="form-group">
+      <label for="name">Passenger Name</label>
+      <input type="text" class="form-control" id="passengerName" required [(ngModel)]="booking.passengerName" name="passengerName">
+    </div>
+ 
+    <div class="form-group">
+        <label for="name">Number of Seats</label>
+        <input type="text" class="form-control" id="numberOfseats" required [(ngModel)]="booking.numberOfseats" name="numberOfseats">
+      </div>
+ 
+      <div class="form-group">
+        <label for="name">Phone no</label>
+        <input type="text" class="form-control" id="phoneNumber" required [(ngModel)]="booking.phoneNumber" name="phoneNumber">
+      </div>
+ 
+      <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+ 
+
+

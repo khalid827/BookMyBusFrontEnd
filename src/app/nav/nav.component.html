@@ -37,6 +37,10 @@
       </li>
 
       <li class="nav-item">
+        <a *ngIf="loginService.isUserLoggedIn()" routerLink="/cancelbooking" class="clickme info" routerLinkActive="active">Cancel Booking</a>
+      </li>
+
+      <li class="nav-item">
         <a *ngIf="loginService.isUserLoggedIn()" routerLink="/profile" class="clickme info" routerLinkActive="active">My Profile</a>
       </li>
 
@@ -44,7 +48,9 @@
         <a *ngIf="loginService.isUserLoggedIn()" routerLink="/feedbacks" class="clickme info" routerLinkActive="active">Feedback</a>
       </li>
 
-      
+      <li class="nav-item">
+        <a *ngIf="loginService.isAdminLoggedIn() && loginService.isUserLoggedIn" routerLink="/addbus" class="clickme info" routerLinkActive="active">Add Bus</a>
+      </li>
 
       <li class="nav-item">
         <a *ngIf="loginService.isAdminLoggedIn() && loginService.isUserLoggedIn" routerLink="/showbuses" class="clickme info" routerLinkActive="active">Buses</a>

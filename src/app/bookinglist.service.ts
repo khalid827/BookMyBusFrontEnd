@@ -21,4 +21,9 @@ export class BookinglistService {
     return this.http.get(`${this.baseUrl}/${email}`)
   }
 
+  deleteBooking1(id:string):Observable<any>
+  {
+    return this.http.delete(`${this.baseUrl}/${id}`,{responseType:'text'});
+  }
+
 }

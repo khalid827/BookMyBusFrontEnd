@@ -36,8 +36,7 @@ export class SearchComponent implements OnInit {
   }
   bookBus(id:string)
   {
-    let user = sessionStorage.getItem('username')
-    this.router.navigate(['booking',id,user]);
+    this.router.navigate(['booking',id]);
   }
 
 }

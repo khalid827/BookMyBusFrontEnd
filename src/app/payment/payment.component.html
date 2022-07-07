@@ -1,0 +1,42 @@
+<p>payment works!</p>
+{{passengerName}}
+
+<h3>Booking</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()" ngNativeValidate>
+    <div class="form-group">
+      <label for="name">Name on card</label>
+      <input type="text" class="form-control" id="nameOnCard" required [(ngModel)]="book.nameOnCard" name="nameOnCard">
+    </div>
+ 
+    <div class="form-group">
+        <label for="name">Credit Card</label>
+        <input type="text" class="form-control" id="creditDebitCard" required [(ngModel)]="book.creditDebitCard" name="creditDebitCard">
+      </div>
+ 
+      <div class="form-group">
+        <label for="name">Exp Month</label>
+        <input type="text" class="form-control" id="expMonth" required [(ngModel)]="book.expMonth" name="expMonth">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Exp Year</label>
+        <input type="text" class="form-control" id="expYear" required [(ngModel)]="book.expYear" name="expYear">
+      </div>
+   
+      <div class="form-group">
+          <label for="name">cvv</label>
+          <input type="text" class="form-control" id="cvv" required [(ngModel)]="book.cvv" name="cvv">
+        </div>
+   
+ 
+      <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+  <h1>{{user}}</h1>
+  <h1>{{id}}</h1>
+  <h1>{{book.passengerName}}</h1>
+  <h1>{{book.expMonth}}</h1>
+</div>
+ 
+
+

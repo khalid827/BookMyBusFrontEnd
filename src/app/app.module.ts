@@ -30,6 +30,8 @@ import { AddbusComponent } from './addbus/addbus.component';
 import { UpdatebusComponent } from './updatebus/updatebus.component';
 import { UpdateprofileComponent } from './updateprofile/updateprofile.component';
 import { AdminBusComponent } from './admin-bus/admin-bus.component';
+import { PaymentComponent } from './payment/payment.component';
+import { CancelbookingComponent } from './cancelbooking/cancelbooking.component';
 
 
 @NgModule({
@@ -58,6 +60,8 @@ import { AdminBusComponent } from './admin-bus/admin-bus.component';
     UpdatebusComponent,
     UpdateprofileComponent,
     AdminBusComponent,
+    PaymentComponent,
+    CancelbookingComponent,
     
   ],
   imports: [
