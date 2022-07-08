@@ -6,6 +6,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Bookingclass } from '../bookingclass';
 import { PaymentService } from '../payment.service';
 import { Bus } from '../bus';
+import { BusServiceService } from '../bus-service.service';
 
 
 @Component({
@@ -19,14 +20,25 @@ export class BookingComponent implements OnInit {
   booking:Observable<Bookingclass[]>|any;
   submitted=false;
   book:Bookingclass|any
+  totalamount:number|any;
+  bus: Bus | any;
 
-
-  constructor(private route:ActivatedRoute,private router:Router,private payment:PaymentService) { }
+  constructor(private route:ActivatedRoute,private router:Router,private payment:PaymentService,private busService:BusServiceService) { }
 
   ngOnInit(): void {
 
     this.booking=new Bookingclass();
+    this.bus = new Bus();
     this.id=this.route.snapshot.params['id'];
+  
+
+    this.busService.getBus(this.id)
+    .subscribe(data => {
+      console.log(data)
+      this.bus = data;
+    }, error => console.log(error));
+    
+
   }
 
   onSubmit() {
@@ -38,6 +50,8 @@ save()
     this.payment.passengerName=this.booking.passengerName;
     this.payment.numberOfseats=this.booking.numberOfseats;
     this.payment.phoneNumber=this.booking.phoneNumber;
+    this.payment.totalamount=this.booking.numberOfseats*this.bus.price;
+
     this.goPayment(this.id);
 
 }

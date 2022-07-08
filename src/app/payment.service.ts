@@ -10,6 +10,7 @@ export class PaymentService {
   passengerName='';
   numberOfseats='';
   phoneNumber='';
+  totalamount=0;
 
 
   baseUrl='http://localhost:9090/bus/bookin/makebook';

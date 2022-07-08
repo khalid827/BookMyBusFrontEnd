@@ -1,5 +1,4 @@
-<p>payment works!</p>
-{{passengerName}}
+
 
 <h3>Booking</h3>
 <div [hidden]="submitted" style="width: 400px;">
@@ -28,14 +27,16 @@
           <label for="name">cvv</label>
           <input type="text" class="form-control" id="cvv" required [(ngModel)]="book.cvv" name="cvv">
         </div>
+
+        <div class="form-group">
+          <label for="totalamount">Total Amount</label>
+          <input type="text" readonly class="form-control" id="totalamount" required [(ngModel)]="totalamount" name="totalamount">
+        </div>
    
  
       <button type="submit" class="btn btn-success">Submit</button>
   </form>
-  <h1>{{user}}</h1>
-  <h1>{{id}}</h1>
-  <h1>{{book.passengerName}}</h1>
-  <h1>{{book.expMonth}}</h1>
+
 </div>
  
 

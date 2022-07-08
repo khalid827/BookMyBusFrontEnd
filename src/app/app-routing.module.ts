@@ -24,6 +24,7 @@ import { ShowfeedbacksComponent } from './showfeedbacks/showfeedbacks.component'
 import { UpdateprofileComponent } from './updateprofile/updateprofile.component';
 import { PaymentComponent } from './payment/payment.component';
 import { CancelbookingComponent } from './cancelbooking/cancelbooking.component';
+import { PaymentDoneComponent } from './payment-done/payment-done.component';
 
 
 
@@ -53,7 +54,8 @@ const routes: Routes = [
   { path:'updateprofile/:email',component:UpdateprofileComponent},
   { path: 'showfeedbacks',component:ShowfeedbacksComponent},
   { path: 'payment/:id/:user',component:PaymentComponent},
-  { path: 'cancelbooking',component:CancelbookingComponent}
+  { path: 'cancelbooking',component:CancelbookingComponent},
+  { path: 'paymentdone',component:PaymentDoneComponent}
   
   
 ];

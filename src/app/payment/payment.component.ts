@@ -15,6 +15,7 @@ export class PaymentComponent implements OnInit {
   passengerName='';
   numberOfseats= '';
   phoneNumber='';
+  totalamount=0;
 
   user:string|any;
   id:string|any;
@@ -30,6 +31,7 @@ export class PaymentComponent implements OnInit {
     this.book=new Bookingclass();
     this.id=this.route.snapshot.params['id'];
     this.user=this.route.snapshot.params['user'];
+    this.totalamount=this.payment.totalamount;
   }
 
   onSubmit() {
@@ -50,7 +52,7 @@ export class PaymentComponent implements OnInit {
 
   reloadData()
   {
-    this.router.navigate(['/home'])
+    this.router.navigate(['/paymentdone'])
   }
 
 }
