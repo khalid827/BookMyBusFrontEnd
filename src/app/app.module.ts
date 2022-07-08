@@ -33,6 +33,7 @@ import { AdminBusComponent } from './admin-bus/admin-bus.component';
 import { PaymentComponent } from './payment/payment.component';
 import { CancelbookingComponent } from './cancelbooking/cancelbooking.component';
 import { PaymentDoneComponent } from './payment-done/payment-done.component';
+import { WelcomeadminComponent } from './welcomeadmin/welcomeadmin.component';
 
 
 @NgModule({
@@ -64,6 +65,7 @@ import { PaymentDoneComponent } from './payment-done/payment-done.component';
     PaymentComponent,
     CancelbookingComponent,
     PaymentDoneComponent,
+    WelcomeadminComponent,
     
   ],
   imports: [

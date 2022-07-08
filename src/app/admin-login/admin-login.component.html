@@ -1,24 +1,46 @@
-<div class="container col-lg-6">
-    <h1 class="text-center">Admin Login</h1>
-    <div class="card bg-light">
-      <div class="card-body">
-        <form class="form-group" ngNativeValidate>
-          <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
-          <div class="alert alert-success" *ngIf='loginSuccess'>{{successMessage}}</div>
-          <div class="form-group">
-            <label for="email">User Name :</label>
-            <input type="text" class="form-control" id="username" [(ngModel)]="username" placeholder="Enter User Name"
-              name="username" required>
-          </div>
-          <div class="form-group">
-            <label for="pwd">Password:</label>
-            <input type="password" class="form-control" [(ngModel)]="password" id="password" placeholder="Enter password"
-              name="password" required>
-          </div>
-          <br>
-          <button (click)=checkLogin() class="btn btn-success">Login</button><br>
-        </form>
+<section class="vh-100">
+  <div class="container py-5 h-100">
+    <div class="row d-flex align-items-center justify-content-center h-100">
+      <div class="col-md-8 col-lg-7 col-xl-6">
+        <img src="https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg?w=2000"
+          class="img-fluid" alt="Phone image">
+      </div>
+      <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1" style="margin-top: -100px;" >
         
+        <h1 class="text-center">Admin Login</h1>
+        <div class="card bg-light">
+          <div class="card-body">
+            <form class="form-group" ngNativeValidate>
+              <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
+              <div class="alert alert-success" *ngIf='loginSuccess'>{{successMessage}}</div>
+              <div class="form-group">
+                <label for="email">User Name :</label>
+                <input type="text" class="form-control" id="username" [(ngModel)]="username" placeholder="Enter User Name"
+                  name="username" required>
+              </div>
+              <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" [(ngModel)]="password" id="password" placeholder="Enter password"
+                  name="password" required>
+              </div>
+              <br>
+              <button (click)=checkLogin() class="btn btn-primary">Login</button><br>
+            </form>
+            
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+

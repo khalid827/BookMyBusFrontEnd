@@ -32,7 +32,7 @@ export class AdminLoginComponent implements OnInit {
       console.log(response);
       if(response)
       {
-        this.router.navigate(['/addbus']);
+        this.router.navigate(['/welcomeadmin']);
         sessionStorage.setItem('username', this.username)
         this.invalidLogin = false;
         this.loginSuccess = true;

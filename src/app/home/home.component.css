@@ -1,0 +1,27 @@
+.card-body{
+    text-align: center;
+    background-color:snow
+}
+
+h2{
+    font-weight: bold;
+    }
+
+    #input {
+        
+        padding-left: 200px;
+        padding-top: 70px;
+        font-weight: bold;
+    }
+    #source
+    {
+        width: 560px;
+        font-weight: bold;
+    }
+    #destination
+    {
+        width: 560px;
+        font-weight: bold;
+    }
+
+    
