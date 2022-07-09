@@ -12,8 +12,7 @@ export class BusServiceService {
   arrivalLocation ='';
   departureLocation='';
   date = '';
-  arrivalLocation1 ='';
-  departureLocation1='';
+
 
 
   baseUrl='http://localhost:9090/bus/details/createbus';

@@ -10,4 +10,5 @@ export class Bus {
     driverContact:string|any;
     price: number|any;
     date:Date|any;
+    seatsAvailable: number|any;
 }

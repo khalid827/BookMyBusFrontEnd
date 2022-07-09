@@ -1,5 +1,6 @@
 import { Time } from "@angular/common";
-export class Bookingclass {
+export class Unauthorizeduser {
+
     id:string| any;
     passengerName : string | any;
      dateOfBooking : Date | any;
@@ -7,5 +8,6 @@ export class Bookingclass {
      arrivalTime : Time | any;
      totalCost : Number | any;
      seatsAvailable:Number|any;
-     
+     email:string|any;
+     phoneNumber:Number|any;
 }

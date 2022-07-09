@@ -7,4 +7,5 @@ export class BookingList {
     arrivalLocation: string|any;
     busType: string|any;
     totalCost: number=0;
+    seatsAvailable:Number|any;
 }

@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { Bus } from '../bus';
 import { BusDetails } from '../bus-details';
 import { BusServiceService } from '../bus-service.service';
+import { AuthenticationService } from '../authentication.service';
 
 @Component({
   selector: 'app-search',
@@ -20,7 +21,8 @@ export class SearchComponent implements OnInit {
   newdate='';
   id=0;
 
-  constructor(private busService:BusServiceService,private router:Router,private route:ActivatedRoute) { }
+  constructor(private busService:BusServiceService,private router:Router,private route:ActivatedRoute,
+                  private authenticationService:AuthenticationService) { }
 
   ngOnInit(): void {
 
@@ -36,7 +38,14 @@ export class SearchComponent implements OnInit {
   }
   bookBus(id:string)
   {
-    this.router.navigate(['booking',id]);
+    if(this.authenticationService.isUserLoggedIn())
+    {
+      this.router.navigate(['booking',id]);
+    }
+    else
+    {
+      this.router.navigate(['unbooking',id]);
+    }
   }
 
 }

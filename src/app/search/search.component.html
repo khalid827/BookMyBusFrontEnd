@@ -8,7 +8,9 @@
             <td>Departure Time</td>
             <td>Driver Contact</td>
             <td>Fare</td>
+            <td>Seats Available</td>
             <td>Action</td>
+            
         </thead>
         <tbody>
             <tr *ngFor="let b of buses | async">
@@ -20,6 +22,7 @@
                 <td>{{b.departureTime}}</td>
                 <td>{{b.driverContact}}</td>
                 <td>{{b.price}}</td>
+                <td>{{b.seatsAvailable}}</td>
                 <td>
                 <button (click)="bookBus(b.id)" class="btn btn-info" style="margin-left: 10px">Book</button>
                  </td>

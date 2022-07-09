@@ -9,7 +9,6 @@ import { LogoutComponent } from './logout/logout.component';
 import { RegisterComponent } from './register/register.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
-import { ThankyouComponent } from './thankyou/thankyou.component';
 import { BookingComponent } from './booking/booking.component';
 import { TriphistoryComponent } from './triphistory/triphistory.component';
 import { MyprofileComponent } from './myprofile/myprofile.component';
@@ -26,6 +25,8 @@ import { PaymentComponent } from './payment/payment.component';
 import { CancelbookingComponent } from './cancelbooking/cancelbooking.component';
 import { PaymentDoneComponent } from './payment-done/payment-done.component';
 import { WelcomeadminComponent } from './welcomeadmin/welcomeadmin.component';
+import { UnauthorizedBookingComponent } from './unauthorized-booking/unauthorized-booking.component';
+import { UnauthorizeduserPaymentComponent } from './unauthorizeduser-payment/unauthorizeduser-payment.component';
 
 
 
@@ -42,7 +43,6 @@ const routes: Routes = [
   {path:'register', component:RegisterComponent},
   {path:'about', component:AboutComponent},
   {path:'contact', component:ContactComponent},
-  {path:'thankyou', component:ThankyouComponent},
   {path:'triphistory', component: TriphistoryComponent },
   {path: 'profile', component: MyprofileComponent},
   {path: 'showusers', component: ShowusersComponent},
@@ -58,6 +58,8 @@ const routes: Routes = [
   { path: 'cancelbooking',component:CancelbookingComponent},
   { path: 'paymentdone',component:PaymentDoneComponent},
   { path: 'welcomeadmin', component: WelcomeadminComponent},
+  { path: 'unbooking/:id', component:UnauthorizedBookingComponent},
+  { path: 'unauthbook/:id',component:UnauthorizeduserPaymentComponent}
   
   
 ];

@@ -60,25 +60,15 @@ export class HomeComponent implements OnInit {
 
     this.submitted = true;
     this.bus=this.registerForm.value;
-    // stop the process here if form is invalid
-    //if (this.registerForm.invalid) {
-      //  return;
-    //}
-    if(this.authenticationService.isUserLoggedIn())
-    {
+
+  
     this.search();
-    }
-    else{
-      alert("You are not Logged in please Login");
-      this.router.navigate(['/login']);
-    }
+  
   }
 
   search() {
     alert(" from "+this.bus.departureLocation+" to "+this.bus.arrivalLocation+" "+this.bus.date);
-    /*this.authenticationService.saveDealer(this.flight)
-    .subscribe(data => console.log(data), error => console.log(error));
-    this.flight= new FlightDetails();*/
+
 
     this.bService.departureLocation = this.bus.departureLocation;
     this.bService.arrivalLocation = this.bus.arrivalLocation;

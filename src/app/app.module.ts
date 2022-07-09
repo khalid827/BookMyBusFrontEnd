@@ -16,7 +16,6 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavComponent } from './nav/nav.component';
-import { ThankyouComponent } from './thankyou/thankyou.component';
 import { SearchComponent } from './search/search.component';
 import { BookingComponent } from './booking/booking.component';
 import { TriphistoryComponent } from './triphistory/triphistory.component';
@@ -34,6 +33,8 @@ import { PaymentComponent } from './payment/payment.component';
 import { CancelbookingComponent } from './cancelbooking/cancelbooking.component';
 import { PaymentDoneComponent } from './payment-done/payment-done.component';
 import { WelcomeadminComponent } from './welcomeadmin/welcomeadmin.component';
+import { UnauthorizedBookingComponent } from './unauthorized-booking/unauthorized-booking.component';
+import { UnauthorizeduserPaymentComponent } from './unauthorizeduser-payment/unauthorizeduser-payment.component';
 
 
 @NgModule({
@@ -48,7 +49,6 @@ import { WelcomeadminComponent } from './welcomeadmin/welcomeadmin.component';
     ContactComponent,
     FooterComponent,
     NavComponent,
-    ThankyouComponent,
     SearchComponent,
     BookingComponent,
     TriphistoryComponent,
@@ -66,6 +66,8 @@ import { WelcomeadminComponent } from './welcomeadmin/welcomeadmin.component';
     CancelbookingComponent,
     PaymentDoneComponent,
     WelcomeadminComponent,
+    UnauthorizedBookingComponent,
+    UnauthorizeduserPaymentComponent,
     
   ],
   imports: [
