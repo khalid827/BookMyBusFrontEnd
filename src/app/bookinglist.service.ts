@@ -7,6 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class BookinglistService {
 
+  static seat:number
+
   baseUrl='http://localhost:9090/bus/bookin/makebook';
 
   constructor(private http:HttpClient) { }

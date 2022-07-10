@@ -35,6 +35,8 @@ import { PaymentDoneComponent } from './payment-done/payment-done.component';
 import { WelcomeadminComponent } from './welcomeadmin/welcomeadmin.component';
 import { UnauthorizedBookingComponent } from './unauthorized-booking/unauthorized-booking.component';
 import { UnauthorizeduserPaymentComponent } from './unauthorizeduser-payment/unauthorizeduser-payment.component';
+import { CancelUnauthorizedBookingComponent } from './cancel-unauthorized-booking/cancel-unauthorized-booking.component';
+import { BooknewticketComponent } from './booknewticket/booknewticket.component';
 
 
 @NgModule({
@@ -68,6 +70,8 @@ import { UnauthorizeduserPaymentComponent } from './unauthorizeduser-payment/una
     WelcomeadminComponent,
     UnauthorizedBookingComponent,
     UnauthorizeduserPaymentComponent,
+    CancelUnauthorizedBookingComponent,
+    BooknewticketComponent,
     
   ],
   imports: [

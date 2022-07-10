@@ -27,7 +27,8 @@ import { PaymentDoneComponent } from './payment-done/payment-done.component';
 import { WelcomeadminComponent } from './welcomeadmin/welcomeadmin.component';
 import { UnauthorizedBookingComponent } from './unauthorized-booking/unauthorized-booking.component';
 import { UnauthorizeduserPaymentComponent } from './unauthorizeduser-payment/unauthorizeduser-payment.component';
-
+import { CancelUnauthorizedBookingComponent } from './cancel-unauthorized-booking/cancel-unauthorized-booking.component';
+import { BooknewticketComponent } from './booknewticket/booknewticket.component';
 
 
 
@@ -59,7 +60,9 @@ const routes: Routes = [
   { path: 'paymentdone',component:PaymentDoneComponent},
   { path: 'welcomeadmin', component: WelcomeadminComponent},
   { path: 'unbooking/:id', component:UnauthorizedBookingComponent},
-  { path: 'unauthbook/:id',component:UnauthorizeduserPaymentComponent}
+  { path: 'unauthbook/:id',component:UnauthorizeduserPaymentComponent},
+  { path:'cancel',component:CancelUnauthorizedBookingComponent},
+  { path:'booknew',component:BooknewticketComponent},
   
   
 ];

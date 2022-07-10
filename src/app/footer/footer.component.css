@@ -1,13 +1,18 @@
-ul {
-    
-    position: absolute;
-    
-}
-    li {
-        float: left;
-        position: relative;
-        margin-right: 196px;
-        margin-top: 0px;
-        margin-left: 170px;
-    }
-
+footer {
+    background:black;
+    padding: 10px 0;
+    text-align: center;
+  }
+  footer a {
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-right: 1px solid black;
+    transition: all .5s ease;
+  }
+  footer a:first-child {
+    border-left: 1px solid black;
+  }
+  footer a:hover {
+    color: white;
+  }

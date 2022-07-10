@@ -21,4 +21,9 @@ export class UnauthorizeduserpaymentService {
     return this.http.post(`${this.baseUrl}/${id}`,value);
   }
 
+  deleteBooking1(id:string):Observable<any>
+  {
+    return this.http.delete(`${this.baseUrl}/${id}`,{responseType:'text'});
+  }
+
 }

@@ -20,4 +20,7 @@ export class PaymentService {
   postBooking(id: string, user: string,value:any): Observable<any> {
     return this.http.post(`${this.baseUrl}/${id}/${user}`,value);
   }
+
+  
+
 }
