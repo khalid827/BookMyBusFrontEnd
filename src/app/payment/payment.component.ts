@@ -53,7 +53,7 @@ export class PaymentComponent implements OnInit {
 
   reloadData()
   {
-    this.router.navigate(['/'])
+    this.router.navigate(['paymentdone'])
   }
 
 }

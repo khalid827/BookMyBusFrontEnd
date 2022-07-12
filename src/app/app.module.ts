@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { NgxPrintModule } from 'ngx-print';
 
 
 import { AppComponent } from './app.component';
@@ -72,7 +73,6 @@ import { BooknewticketComponent } from './booknewticket/booknewticket.component'
     UnauthorizeduserPaymentComponent,
     CancelUnauthorizedBookingComponent,
     BooknewticketComponent,
-    
   ],
   imports: [
     BrowserModule,
@@ -80,6 +80,7 @@ import { BooknewticketComponent } from './booknewticket/booknewticket.component'
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    NgxPrintModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -24,7 +24,7 @@
     <ul class="navbar-nav ms-auto">
   
       <li class="nav-item">
-        <a *ngIf="loginService.isAdminLoggedIn() && loginService.isUserLoggedIn" routerLink="adminlogin" class="clickme info" routerLinkActive="active">Admin Login</a>
+        <a *ngIf="!loginService.isAdminLoggedIn() || loginService.isUserLoggedIn()" routerLink="adminlogin" class="clickme info" routerLinkActive="active">Admin Login</a>
       </li>
 
       <li class="nav-item">
@@ -32,7 +32,7 @@
       </li>
 
       <li class="nav-item">
-        <a *ngIf="loginService.isAdminLoggedIn() && loginService.isUserLoggedIn" routerLink="login" class="clickme info" routerLinkActive="active">User Login</a>
+        <a *ngIf="!loginService.isUserLoggedIn()" routerLink="login" class="clickme info" routerLinkActive="active">User Login</a>
       </li>
   
       <li class="nav-item">
@@ -44,48 +44,44 @@
       </li>
 
       <li class="nav-item">
-        <a *ngIf="loginService.isUserLoggedIn()" routerLink="/triphistory" class="clickme info" routerLinkActive="active">Trip History</a>
+        <a *ngIf="loginService.isUserLoggedIn() && !loginService.isAdminLoggedIn()" routerLink="/triphistory" class="clickme info" routerLinkActive="active">Trip History</a>
       </li>
 
       <li class="nav-item">
-        <a *ngIf="loginService.isUserLoggedIn()" routerLink="/cancelbooking" class="clickme info" routerLinkActive="active">Cancel Booking</a>
+        <a *ngIf="loginService.isUserLoggedIn() && !loginService.isAdminLoggedIn()" routerLink="/cancelbooking" class="clickme info" routerLinkActive="active">Cancel Booking</a>
       </li>
 
       <li class="nav-item">
-        <a *ngIf="loginService.isUserLoggedIn()" routerLink="/profile" class="clickme info" routerLinkActive="active">My Profile</a>
+        <a *ngIf="loginService.isUserLoggedIn() && !loginService.isAdminLoggedIn()" routerLink="/profile" class="clickme info" routerLinkActive="active">My Profile</a>
       </li>
 
       <li class="nav-item">
-        <a *ngIf="loginService.isUserLoggedIn()" routerLink="/feedbacks" class="clickme info" routerLinkActive="active">Feedback</a>
+        <a *ngIf="loginService.isUserLoggedIn() && !loginService.isAdminLoggedIn()" routerLink="/feedbacks" class="clickme info" routerLinkActive="active">Feedback</a>
       </li>
 
       <li class="nav-item">
-        <a *ngIf="loginService.isAdminLoggedIn() && loginService.isUserLoggedIn" routerLink="/addbus" class="clickme info" routerLinkActive="active">Add Bus</a>
+        <a *ngIf="loginService.isAdminLoggedIn() && !loginService.isUserLoggedIn()" routerLink="/addbus" class="clickme info" routerLinkActive="active">Add Bus</a>
       </li>
 
       <li class="nav-item">
-        <a *ngIf="loginService.isAdminLoggedIn() && loginService.isUserLoggedIn" routerLink="/showbuses" class="clickme info" routerLinkActive="active">Buses</a>
+        <a *ngIf="loginService.isAdminLoggedIn() && !loginService.isUserLoggedIn()" routerLink="/showbuses" class="clickme info" routerLinkActive="active">Buses</a>
       </li>
 
       <li class="nav-item">
-        <a *ngIf=" !loginService.isAdminLoggedIn() " routerLink="showbookings" class="clickme info" routerLinkActive="active">Bookings</a>
+        <a *ngIf=" loginService.isAdminLoggedIn() && !loginService.isUserLoggedIn()" routerLink="showbookings" class="clickme info" routerLinkActive="active">Bookings</a>
       </li>
 
       <li class="nav-item">
-        <a *ngIf=" loginService.isAdminLoggedIn()" routerLink="showbookings" class="clickme info" routerLinkActive="active">Bookings</a>
-      </li>
-
-      <li class="nav-item">
-        <a *ngIf="loginService.isAdminLoggedIn() && loginService.isUserLoggedIn" routerLink="/showusers" class="clickme info" routerLinkActive="active">Users</a>
+        <a *ngIf="loginService.isAdminLoggedIn() && !loginService.isUserLoggedIn()" routerLink="/showusers" class="clickme info" routerLinkActive="active">Users</a>
       </li>
 
 
       <li class="nav-item">
-        <a *ngIf="loginService.isAdminLoggedIn() && loginService.isUserLoggedIn" routerLink="/showfeedbacks" class="clickme info" routerLinkActive="active">Get all Feedbacks</a>
+        <a *ngIf="loginService.isAdminLoggedIn() && !loginService.isUserLoggedIn()" routerLink="/showfeedbacks" class="clickme info" routerLinkActive="active">Get all Feedbacks</a>
       </li>
 
       <li class="nav-item">
-        <a *ngIf="loginService.isUserLoggedIn()" routerLink="logout" class="clickme info" routerLinkActive="active">Logout</a>
+        <a *ngIf="loginService.isUserLoggedIn() || loginService.isAdminLoggedIn()" routerLink="logout" class="clickme info" routerLinkActive="active">Logout</a>
       </li>      
     </ul>
   </nav>

@@ -10,6 +10,7 @@ export class BookinglistService {
   static seat:number
 
   baseUrl='http://localhost:9090/bus/bookin/makebook';
+  baseUrl2='http://localhost:9090/bus/bookin/latest';
 
   constructor(private http:HttpClient) { }
 
@@ -27,5 +28,9 @@ export class BookinglistService {
   {
     return this.http.delete(`${this.baseUrl}/${id}`,{responseType:'text'});
   }
+  getLatestBooking():Observable<any>
+{
+  return this.http.get(`${this.baseUrl2}`)
+}
 
 }

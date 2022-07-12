@@ -58,6 +58,7 @@ save()
     this.payment.numberOfseats=this.booking.numberOfseats;
     this.payment.phoneNumber=this.booking.phoneNumber;
     this.payment.totalamount=this.booking.numberOfseats*this.bus.price;
+    this.payment.busNo=this.bus.busNo;
 
     this.goPayment(this.id);
 

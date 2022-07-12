@@ -33,7 +33,7 @@ export class AdminLoginComponent implements OnInit {
       if(response)
       {
         this.router.navigate(['/welcomeadmin']);
-        sessionStorage.setItem('username', this.username)
+        sessionStorage.setItem('admin', this.username)
         this.invalidLogin = false;
         this.loginSuccess = true;
         this.successMessage = 'Login Successful.';

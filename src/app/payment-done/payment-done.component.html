@@ -1,7 +1,23 @@
-<div class="container">
-    <div class="col-6">
-        <img src="https://static.vecteezy.com/system/resources/previews/002/076/478/original/contactless-payment-illustration-concept-with-woman-character-vector.jpg" width="500px" alt=""
-        style="border-radius: 100px">
-      </div>
-      
-</div>
+
+
+<div id="print-section">
+
+  <div class="container">
+    <p><b>Ticket Number</b>:{{booking.id}}</p>
+    <p><b>Bus Number</b>:{{this.busNo}}</p>
+    <p><b>Passenger Name</b>:{{booking.passengerName}}</p>
+    <p><b>Phone Number</b>:{{booking.phoneNumber}}</p>
+    <p><b>Departure Location</b>:{{booking.departureLocation}}</p>
+    <p><b>Arrival Location</b>:{{booking.arrivalLocation}}</p>
+    <p><b>Departure Time</b>:{{booking.departureTime}}</p>
+    <p><b>Arrival Time</b>:{{booking.arrivalTime}}</p>
+    <p><b>Date of Booking</b>:{{booking.dateOfBooking}}</p>
+    <p><b>Date of Journey</b>:{{booking.journeyDate}}</p>
+    <p><b>Number of Seats Selected</b>:{{booking.numberOfseats}}</p>
+    <p><b>Total Fare</b>:{{booking.totalCost}}</p>
+  </div>
+	</div>
+
+<button printTitle="Print Title" printSectionId="print-section" ngxPrint>
+  Print
+</button>

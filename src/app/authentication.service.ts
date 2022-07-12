@@ -47,14 +47,18 @@ export class AuthenticationService {
   }
 
   isAdminLoggedIn() {
-    let admin = "Khalid@gmail.com";
-    console.log(!(admin === null))
-    return !(admin === null)
+    let user = sessionStorage.getItem('admin')
+    console.log(!(user === null))
+    return !(user === null)
   }
- 
+
   logOut() {
+    if(this.isAdminLoggedIn())
+    sessionStorage.removeItem('admin')
+    else
     sessionStorage.removeItem('username')
   }
+ 
 
   saveUser(user: Object): Observable<Object> {
     return this.http.post(`http://localhost:9090/bus/usd/registerUser`, user);
