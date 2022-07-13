@@ -11,5 +11,5 @@ export class AppComponent {
 
   constructor(public loginService:AuthenticationService){}
   
-  title = 'Air India';
+  title = 'BookMyBus';
 }

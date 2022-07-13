@@ -30,6 +30,7 @@ export class ShowbusesComponent implements OnInit {
     this.router.navigate(['details',id])
   }
 
+
   editBus(id:string)
   {
     this.router.navigate(['update',id]);  //navigate to component from method

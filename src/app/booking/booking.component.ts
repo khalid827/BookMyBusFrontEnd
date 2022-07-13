@@ -66,6 +66,6 @@ save()
 goPayment(id:string)
 {
   let user = sessionStorage.getItem('username')
-    this.router.navigate(['payment',id,user]);
+    this.router.navigate(['booknew',id]);
 }
 }

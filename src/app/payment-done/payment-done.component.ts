@@ -12,6 +12,7 @@ export class PaymentDoneComponent implements OnInit {
 
   booking:BookingList|any;
   busNo:number|any;
+  selected_seats : number[] = [];
 
   constructor(private bookinService:BookinglistService,private payment:PaymentService) { }
 
@@ -21,6 +22,7 @@ export class PaymentDoneComponent implements OnInit {
       this.booking=data;
     });
 this.busNo=this.payment.busNo;
+this.selected_seats=this.payment.selected_seats;
   }
 
 }

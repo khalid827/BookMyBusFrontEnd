@@ -32,6 +32,8 @@ export class MyprofileComponent implements OnInit {
    
   }
 
+  
+
   list()
   {
     this.email=sessionStorage.getItem('username'); 

@@ -1,0 +1,16 @@
+<div class="col-md-9 offset-md-2 card card-body mt-3">
+    <table class="table table-bordered table-hover table-striped">
+        <thead style="background:darkgrey">
+            <td>User Id</td>
+            <td>Name</td>
+            <td>Email</td>
+        </thead>
+        <tbody>
+            <tr *ngFor="let u of user | async">
+                <td>{{ u.id }}</td>
+                <td>{{ u.name }}</td>
+                <td>{{ u.email }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

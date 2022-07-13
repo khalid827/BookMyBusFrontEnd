@@ -1,0 +1,15 @@
+#borders{
+    width: 70%;
+    align-self: center;
+    margin-top: 10px;
+}
+thead{
+    background-color: rgba(4, 144, 183, 0.711);
+    color: whitesmoke;
+  
+}
+
+#card{
+    width: 40%;
+    height: 50%;
+}

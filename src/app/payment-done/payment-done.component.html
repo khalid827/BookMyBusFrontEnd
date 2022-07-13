@@ -1,23 +1,76 @@
+<div class="container parentcontainer" id="print-section">
+  <div class="row justify-content-center">
+      <div class="col col-lg-8 col-md-10 col-sm-12 ticket">
+              <div class="row heading my-2">
+                  <div class="col">Online Bus Reservation Ticket</div>
+              </div>
+              <div class="row route my-2 mx-1 py-2"> 
+                  <div class="col">
+                      <h5 class="endpoints">{{booking.departureLocation}} to {{booking.arrivalLocation}}</h5>
+                  </div>
+                  <div class="col">
+                      <h5>{{booking.journeyDate}}</h5>
+                  </div>
+              </div>
+              <div class="row my-3 mx-1 passenger pt-2">
+                  <div class="col-md-4 col-sm-6">
+                      <h5>Passenger Details</h5>
+                      <h6 class="passengername">{{booking.passengerName}}</h6>
+                      <p>{{booking.phoneNumber}}</p>
+                  </div>
 
+                  <div class="col-md-4 col-sm-6">
+                      <h5>Ticket Id</h5>
+                      <p>{{booking.id}}</p>
+                  </div>
 
-<div id="print-section">
+                  <div class="col-md-2 col-sm-6">
+                      <h5>Total Seats</h5>
+                      <p>{{booking.numberOfseats}}</p>
+                  </div>
 
-  <div class="container">
-    <p><b>Ticket Number</b>:{{booking.id}}</p>
-    <p><b>Bus Number</b>:{{this.busNo}}</p>
-    <p><b>Passenger Name</b>:{{booking.passengerName}}</p>
-    <p><b>Phone Number</b>:{{booking.phoneNumber}}</p>
-    <p><b>Departure Location</b>:{{booking.departureLocation}}</p>
-    <p><b>Arrival Location</b>:{{booking.arrivalLocation}}</p>
-    <p><b>Departure Time</b>:{{booking.departureTime}}</p>
-    <p><b>Arrival Time</b>:{{booking.arrivalTime}}</p>
-    <p><b>Date of Booking</b>:{{booking.dateOfBooking}}</p>
-    <p><b>Date of Journey</b>:{{booking.journeyDate}}</p>
-    <p><b>Number of Seats Selected</b>:{{booking.numberOfseats}}</p>
-    <p><b>Total Fare</b>:{{booking.totalCost}}</p>
+                  <div class="col-md-2 col-sm-6">
+                      <h5>Total Fare</h5>
+                      <p>{{booking.totalCost}}</p>
+                  </div>
+
+              </div>
+
+              <div class="row my-3 mx-1 passenger pt-2">
+                  <div class="col-md-4 col-sm-6">
+                      <h5>Bus No.</h5> 
+                      <p>{{this.busNo}}</p>
+                  </div>
+
+                  <div class="row my-3 mx-1 passenger pt-2">
+                    <div class="col-md-4 col-sm-6">
+                        <h5>Seat Nos.</h5>
+                        <p>{{this.selected_seats}}</p>
+                    </div>
+
+                  <div class="col-md-4 col-sm-6">
+                      <h5>Reporting Time</h5>
+                      <p>Before 30 minutes</p>
+                  </div>
+
+                  <div class="col-md-4 col-sm-6">
+                      <h5>Departure Time</h5>
+                      <p>{{booking.departureTime}}</p>
+                  </div>
+              </div>
+      </div>
+  
+  <div class="row my-3" style="text-align: center;">
+      <div class="mx-auto condition">**Please bring this copy to ticket counter for collecting your ticket</div>
   </div>
-	</div>
 
-<button printTitle="Print Title" printSectionId="print-section" ngxPrint>
-  Print
-</button>
+  <div class="row my-3" class="text-center">
+    <div class="mx-auto">
+        <button class="btn btn-primary" printTitle="Print Title" printSectionId="print-section" ngxPrint>Print</button>
+    </div>
+</div>
+  
+</div>
+
+</div>
+

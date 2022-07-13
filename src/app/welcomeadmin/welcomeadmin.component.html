@@ -1,1 +1,98 @@
-<p>welcomeadmin works!</p>
+<div class="container mt-2">
+    <!--   <div class="card card-block mb-2">
+        <h4 class="card-title">Card 1</h4>
+        <p class="card-text">Welcom to bootstrap card styles</p>
+        <a href="#" class="btn btn-primary">Submit</a>
+      </div>   -->
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <div class="card card-block">
+          <h4 class="card-title text-right">Buses</h4>
+        <img src="https://previews.123rf.com/images/emuemu/emuemu1308/emuemu130800024/21471424-buses-in-four-colors-vector-3d-illustration.jpg" alt="Photo of sunset">
+            <h5 class="card-title mt-3 mb-3"></h5>
+             <div class="card-text">
+                <button class="btn btn-primary" *ngIf="loginService.isAdminLoggedIn() && !loginService.isUserLoggedIn()" routerLink="/showbuses" class="clickme info" routerLinkActive="active">Buses</button>
+             </div> 
+      </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card card-block">
+          <h4 class="card-title text-right">Bookings</h4>
+        <img src="https://img.freepik.com/free-vector/woman-booking-appointment-calendar_23-2148562875.jpg?w=2000" alt="Photo of sunset">
+            <h5 class="card-title  mt-3 mb-3"></h5>
+            <div class="card-text">
+                <button class="btn btn-primary" *ngIf=" loginService.isAdminLoggedIn() && !loginService.isUserLoggedIn()" routerLink="/showbookings" class="clickme info" routerLinkActive="active">Bookings</button>
+            </div>
+        </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card card-block">
+          <h4 class="card-title text-right">Users</h4>
+        <img src="https://previews.123rf.com/images/yupiramos/yupiramos1807/yupiramos180798791/114808612-group-of-young-people-vector-illustration-design.jpg"  alt="Photo of sunset">
+            <h5 class="card-title  mt-3 mb-3"></h5>
+            <div class="card-text">
+                <button class="btn btn-primary" *ngIf="loginService.isAdminLoggedIn() && !loginService.isUserLoggedIn()" routerLink="/showusers" class="clickme info" routerLinkActive="active">Users</button>
+            </div> 
+      </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card card-block">
+          <h4 class="card-title text-right">Feedbacks</h4>
+        <img src="https://img.freepik.com/premium-vector/customer-online-review-rating-feedback-set_124507-8052.jpg?w=2000" alt="Photo of sunset">
+            <h5 class="card-title  mt-3 mb-3"></h5>
+            <div class="card-text">
+                <button id="bt1" class="btn btn-info" *ngIf="loginService.isAdminLoggedIn() && !loginService.isUserLoggedIn()" routerLink="/showfeedbacks" class="clickme info" routerLinkActive="active">Get all Feedbacks</button>
+            </div> 
+      </div>
+        </div>    
+        <br>
+        <div class="col-md-3 col-sm-6">
+            <div class="card card-block">
+            <h4 class="card-title text-right">Add Buses</h4>
+          <img src="https://previews.123rf.com/images/emuemu/emuemu1308/emuemu130800024/21471424-buses-in-four-colors-vector-3d-illustration.jpg" alt="Photo of sunset">
+              <h5 class="card-title mt-3 mb-3"></h5>
+               <div class="card-text">
+                  <button class="btn btn-primary" *ngIf="loginService.isAdminLoggedIn() && !loginService.isUserLoggedIn()" routerLink="/addbus" class="clickme info" routerLinkActive="active">Add Buses</button>
+               </div> 
+        </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6">
+            <div class="card card-block">
+            <h4 class="card-title text-right">Unauthorised Bookings</h4>
+          <img src="https://thumbs.dreamstime.com/b/man-makes-appointment-online-doctor-calendar-selects-desired-date-colorful-trend-vector-illustration-man-172510958.jpg" alt="Photo of sunset">
+              <h5 class="card-title mt-3 mb-3"></h5>
+               <div class="card-text">
+                  <button class="btn btn-primary" *ngIf="loginService.isAdminLoggedIn() && !loginService.isUserLoggedIn()" routerLink="/showunauthorizedbookings" class="clickme info" routerLinkActive="active">Unauthorized Bookings</button>
+               </div> 
+        </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6">
+            <div class="card card-block">
+            <h4 class="card-title text-right">Users</h4>
+          <img src="https://img.freepik.com/free-vector/coffee-break-concept-illustration_114360-3707.jpg?w=2000" alt="Photo of sunset">
+              <h5 class="card-title mt-3 mb-3"></h5>
+               <div class="card-text">
+                  <button class="btn btn-primary" *ngIf="loginService.isAdminLoggedIn() && !loginService.isUserLoggedIn()" routerLink="/inactivecustomers" class="clickme info" routerLinkActive="active">Inactive Users</button>
+               </div> 
+        </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6">
+            <div class="card card-block">
+            <h4 class="card-title text-right">Revenue</h4>
+          <img src="https://previews.123rf.com/images/emuemu/emuemu1308/emuemu130800024/21471424-buses-in-four-colors-vector-3d-illustration.jpg" alt="Photo of sunset">
+              <h5 class="card-title mt-3 mb-3"></h5>
+               <div class="card-text">
+                  <button class="btn btn-primary" *ngIf="loginService.isAdminLoggedIn() && !loginService.isUserLoggedIn()" routerLink="/profits" class="clickme info" routerLinkActive="active">Profits</button>
+               </div> 
+        </div>
+          </div>
+
+
+
+
+      </div>
+      
+    </div>

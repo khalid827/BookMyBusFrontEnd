@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
   registerForm: FormGroup | any;
   submitted = false;
  
-  City: any = ['Bangalore','Chennai', 'Delhi', 'Kolkatta','Mumbai', ]
+  City: any = ['Bangalore','Chennai', 'Delhi', 'Kolkata','Mumbai', ]
  
   bus: BusDetails = new BusDetails();
   
@@ -60,6 +60,11 @@ export class HomeComponent implements OnInit {
 
     this.submitted = true;
     this.bus=this.registerForm.value;
+
+    //stop the process here if form is invalid
+    //if (this.registerForm.invalid) {
+     //   return;
+    //}
 
   
     this.search();

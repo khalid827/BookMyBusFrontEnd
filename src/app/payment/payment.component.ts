@@ -46,14 +46,14 @@ export class PaymentComponent implements OnInit {
 
     this.payment.postBooking(this.id,this.user,this.book)
       .subscribe(data => console.log(data), error => console.log(error));
-    alert("payment")
+    alert("Payment Successful")
     this.book = new Bookingclass();
     this.reloadData();
   }
 
   reloadData()
   {
-    this.router.navigate(['paymentdone'])
+    this.router.navigate(['paymentapproved'])
   }
 
 }

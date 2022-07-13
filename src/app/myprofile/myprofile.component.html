@@ -1,36 +1,67 @@
-<div class="container">
-    <div class="card">
-      <div class="card-body">
-        
-      
-<h2>User Details</h2> 
- 
-<hr/>
-<div *ngIf="userprof">
-    <div>
-        <label><b>User Id: </b></label> {{userprof.id}}
-      </div>
-  <div>
-    <label><b>Name: </b></label> {{userprof.name}}
-  </div>
-  <div>
-    <label><b>Email: </b></label> {{userprof.email}}
-  </div>
-  <div>
-    <label><b>Date of Birth: </b></label> {{userprof.dob}}
-  </div>  
-  <div>
-    <label><b>Password: </b></label> {{userprof.password}}
-  </div> 
-  <div>
-    <label><b>Phone NO: </b></label> {{userprof.phoneNo}}
-  </div> 
-  </div>
-  </div>
-</div>
+<div class="page-content page-container" id="page-content">
+  <div class="padding">
+      <div class="row container d-flex justify-content-center">
+   <div class="col-xl-8 col-md-12">
+                                              <div class="card user-card-full">
+                                                  <div class="row m-l-0 m-r-0">
+                                                      <div class="col-sm-4 bg-c-lite-green user-profile">
+                                                          <div class="card-block text-center text-white">
+                                                              <div class="m-b-25">
+                                                                  <img src="https://img.icons8.com/bubbles/100/000000/user.png" class="img-radius" alt="User-Profile-Image">
+                                                              </div>
 
-
- </div>
-<br>
-<br>
-<button (click)="list()" class="btn btn-primary">Edit Profile</button><br>
+                                                              <h4 class="f-w-600">{{userprof.name}}</h4>
+                                                              
+                                                              <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
+                                                          </div>
+                                                      </div>
+                                                      <div class="col-sm-8">
+                                                          <div class="card-block">
+                                                              
+                                                              <div class="row" >
+                                                              <div  *ngIf="userprof">
+                                                                  <div class="col-md-10">
+                                                                    <div>
+                                                                      <label><b>User Id: </b></label> {{userprof.id}}
+                                                                    </div>
+                                                                  </div>
+                                                                  <div class="col-md-10">
+                                                                    <div>
+                                                                      <label><b>Name: </b></label> {{userprof.name}}
+                                                                    </div>
+                                                                  </div>
+                                                              </div>
+                                                              <div class="col-md-10">
+                                                                <div>
+                                                                  <label><b>Email: </b></label> {{userprof.email}}
+                                                                </div>
+                                                              </div>
+                                                              
+                                                                  <div class="col-md-12">
+                                                                    <div>
+                                                                      <label><b>Date of Birth: </b></label> {{userprof.dob}}
+                                                                    </div> 
+                                                                  </div>
+                                                           
+                                                                  <div class="col-md-10">
+                                                                    <div>
+                                                                      <label><b>Password: </b></label> {{userprof.password}}
+                                                                    </div> 
+                                                                  </div>
+                                                                  <div class="col-md-10">
+                                                                    <div>
+                                                                      <label><b>Phone NO: </b></label> {{userprof.phoneNo}}
+                                                                    </div> 
+                                                                  </div>
+                                                                </div>
+                                                                
+                                                             
+                                                          </div>
+                                                          <button (click)="list()" class="btn btn-primary">Edit Profile</button><br>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                           </div>
+                                              </div>
+                                          </div>

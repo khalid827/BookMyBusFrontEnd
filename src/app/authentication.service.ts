@@ -18,6 +18,8 @@ export class AuthenticationService {
   private baseUrl1='http://localhost:9090/bus/usd/findallUsers';
   private baseUrl3='http://localhost:9090/bus/usd/getuserdetails';
   private baseUrl4='http://localhost:9090/bus/usd/editdetails';
+  private baseUrl5='http://localhost:9090/bus/revenue/inactive';
+  private baseUrl6='http://localhost:9090/bus/revenue/profit';
 
   constructor(private http:HttpClient) { }
 
@@ -72,4 +74,16 @@ export class AuthenticationService {
   {
     return this.http.put(`${this.baseUrl4}/${email}`,value)
   }
+
+  inactiveUsers()
+  {
+    return this.http.get(`${this.baseUrl5}`)
+  }
+
+  getProfit()
+  {
+    return this.http.get(`${this.baseUrl6}`)
+  }
+
+
 }

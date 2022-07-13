@@ -12,8 +12,12 @@ export class UnauthorizeduserpaymentService {
   phoneNumber='';
   totalamount=0;
   email='';
+  busNo=0;
+  selected_seats : number[] = [];
+
 
   baseUrl='http://localhost:9090/bus/unauthorize/book';
+  baseUrl1='http://localhost:9090/bus/unauthorize/latestbooking';
 
   constructor(private http:HttpClient) { }
 
@@ -24,6 +28,11 @@ export class UnauthorizeduserpaymentService {
   deleteBooking1(id:string):Observable<any>
   {
     return this.http.delete(`${this.baseUrl}/${id}`,{responseType:'text'});
+  }
+
+  getLatest():Observable<any>
+  {
+    return this.http.get(`${this.baseUrl1}`);
   }
 
 }

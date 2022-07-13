@@ -1,0 +1,40 @@
+#borders{
+   
+    margin-top: 2%;
+     width: 72%;
+     margin-left: 20%;
+    
+      
+  
+  }
+  thead{
+      background-color:blue;
+      color: whitesmoke;
+      border-radius: 10px;
+  }
+
+  #bt2{
+  
+  
+  background-color: rgb(234, 32, 140);
+
+  
+   
+  
+  }
+
+  #bt1{
+    
+   
+    background-color:cadetblue;
+    
+   }
+   
+  
+
+  #bt3{
+  
+  
+    background-color:indianred;
+    
+   }

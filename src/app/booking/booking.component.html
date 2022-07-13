@@ -1,5 +1,18 @@
-<h3>Booking</h3>
-<div [hidden]="submitted" style="width: 400px;">
+        <section class="vh-100">
+          <div class="container py-5 h-100">
+            <div class="row d-flex align-items-center justify-content-center h-100">
+              <div class="col-md-8 col-lg-6 col-xl-6">
+                <img src="https://img.freepik.com/free-vector/bus-travel-card-users-illustration_335657-337.jpg?t=st=1657619547~exp=1657620147~hmac=67469969a6036a50deac230e783e21172fbba5d6e2b093958fc0cd2b244023d4&w=996"
+                  class="img-fluid" alt="Phone image" style="width: 2000px;">
+              </div>
+              <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1" style="margin-top: -100px;" >
+                
+                <h1 class="text-center">Booking Details</h1>
+                <div class="card bg-light">
+                  <div class="card-body">
+
+                  
+    <div [hidden]="submitted" style="width: 400px;">
   <form (ngSubmit)="onSubmit()" ngNativeValidate>
     <div class="form-group">
       <label for="name">Passenger Name</label>
@@ -12,7 +25,7 @@
       </div>
  
       <div class="form-group">
-        <label for="name">Phone no</label>
+        <label for="name">Phone Number</label>
         <input type="text" class="form-control" id="phoneNumber" required [(ngModel)]="booking.phoneNumber" name="phoneNumber">
       </div>
 
@@ -20,8 +33,12 @@
  
       <button type="submit" class="btn btn-success">Submit</button>
   </form>
+  </div>
+</div>
 </div>
 
+                </div>
+ </div>
 
  
 

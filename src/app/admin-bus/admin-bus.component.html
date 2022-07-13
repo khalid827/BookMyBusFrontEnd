@@ -1,44 +1,31 @@
-<h2>Bus Details</h2> 
- 
-<hr/>
-<div *ngIf="bus">
-    <div>
-        <label><b>Bus Id: </b></label> {{bus.id}}
-      </div>
-  <div>
-    <label><b>Bus No: </b></label> {{bus.busNo}}
-  </div>
-  <div>
-    <label><b>Departure Location: </b></label> {{bus.departureLocation}}
-  </div>
-  <div>
-    <label><b>Arrival Location: </b></label> {{bus.arrivalLocation}}
-  </div>  
-  <div>
-    <label><b>Departure Time: </b></label> {{bus.departureTime}}
-  </div>  
-  <div>
-    <label><b>Arrival Time: </b></label> {{bus.arrivalTime}}
-  </div> 
-  <div>
-    <label><b>Bus Type: </b></label> {{bus.busType}}
-  </div> 
-  <div>
-    <label><b>Price: </b></label> {{bus.price}}
-  </div> 
-  <div>
-    <label><b>Driver Contact: </b></label> {{bus.driverContact}}
-  </div> 
 
-  <div>
-    <label><b>Date of Journey: </b></label> {{bus.date}}
+
+
+
+<div class="card mb-3" style="width: 18rem;">
+  <img class="card-img-top" src="https://img.freepik.com/free-vector/bus-driver-concept-illustration_114360-6330.jpg?w=2000" class="card-img-top" alt="...">
+  <div class="card-body" *ngIf="bus">
+    <h5 class="card-title">Bus Details</h5>
+    <p class="card-text">This bus departs from "{{bus.departureLocation}}" on {{bus.date}} and arrives at  "{{bus.arrivalLocation}}".</p>
   </div>
-  
-  <div>
-    <label><b>Seats Available: </b></label> {{bus.seatsAvailable}}
-  </div> 
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Bus ID: {{bus.id}}</li>
+    <li class="list-group-item">Bus No: {{bus.busNo}}</li>
+    <li class="list-group-item">Departure Time: {{bus.departureTime}}</li>
+    <li class="list-group-item">Arrival Time: {{bus.arrivalTime}}</li>
+    <li class="list-group-item">Bus Type: {{bus.busType}}</li>
+    <li class="list-group-item">Fare: {{bus.price}}</li>
+    <li class="list-group-item">Seats Available: {{bus.seatsAvailable}}</li>
+    <li class="list-group-item">Driver Contact:  {{bus.driverContact}}</li>
+  </ul>
+  <div class="card-body">
+    <a routerLink="/showbuses" class="card-link">Back to bus list</a>
+    
+  </div>
 </div>
- 
-<br>
-<br>
-<button (click)="list()" class="btn btn-primary">Back to Bus List</button><br>
+
+
+
+
+
+

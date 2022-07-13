@@ -22,6 +22,7 @@ export class UnauthorizedBookingComponent implements OnInit {
   totalamount:number|any;
   bus: Bus | any;
 
+  
   constructor(private route:ActivatedRoute,private router:Router,private payment:UnauthorizeduserpaymentService,
                   private busService:BusServiceService) { }
 
@@ -57,13 +58,15 @@ save()
     this.payment.phoneNumber=this.booking.phoneNumber;
     this.payment.email=this.booking.email;
     this.payment.totalamount=this.booking.numberOfseats*this.bus.price;
+    this.payment.busNo=this.bus.busNo;
 
     this.goPayment(this.id);
 
 }
 goPayment(id:string)
 {
-    this.router.navigate(['unauthbook',id]);
+  let user = sessionStorage.getItem('username')
+  this.router.navigate(['unauthseat',id]);
 }
 
 }

@@ -12,7 +12,7 @@ export class PaymentService {
   phoneNumber='';
   totalamount=0;
   busNo=0;
-
+  selected_seats : number[] = [];
 
   baseUrl='http://localhost:9090/bus/bookin/makebook';
 

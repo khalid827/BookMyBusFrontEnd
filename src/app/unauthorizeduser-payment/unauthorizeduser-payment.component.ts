@@ -54,6 +54,6 @@ export class UnauthorizeduserPaymentComponent implements OnInit {
 
   reloadData()
   {
-    this.router.navigate(['/'])
+    this.router.navigate(['unauthticket'])
   }
 }

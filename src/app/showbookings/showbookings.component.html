@@ -1,17 +1,20 @@
-<div class="col-md-9 offset-md-2 card card-body mt-3">
-    <table class="table table-bordered table-hover table-striped">
-        <thead style="background:darkgrey">
-            <td>Booking Id</td>
-            <td>Booking Date</td>
-            <td>Passenger Name</td>
-            <td>Source</td>
-            <td>Destination</td>
-            <td>Bus Type</td>
-            <td>Fare</td>
-            
-        </thead>
-        <tbody>
-            <tr *ngFor="let book of bookinglist|async">
+<table class="table table-borderless" id="borders">
+    <thead class="thead-primary">
+      <tr>
+        <th scope="col">S.No</th>
+        <th scope="col">Booking Id</th>
+        <th scope="col">Booking Date</th>
+        <th scope="col">Passenger Name</th>
+        <th scope="col">Source</th>
+        <th scope="col">Destination</th>
+        <th scope="col">Bus Type</th>
+        <th scope="col">Fare</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of bookinglist|async;let i=index">
+       
+                <td >{{i+1}}</td>
                 <td>{{ book.id}}</td>
                 <td>{{ book.dateOfBooking}}</td>
                 <td>{{ book.passengerName}}</td>
@@ -19,8 +22,6 @@
                 <td>{{ book.arrivalLocation}}</td>
                 <td>{{ book.busType}}</td>
                 <td>{{ book.totalCost}}</td>
-                
-            </tr>
-        </tbody>
-    </table>
-</div>
+     
+    </tbody>
+  </table>

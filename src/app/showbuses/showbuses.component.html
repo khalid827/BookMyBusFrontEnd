@@ -1,32 +1,39 @@
+<table class="table table-borderless" id="borders">
+    <thead class="thead-primary">
+      <tr>
+        <th scope="col"> Bus Id</th>
+        <th scope="col">Bus Type</th>
+        <th scope="col">Source</th>
+        <th scope="col">Destination</th>
+        <th scope="col">Departure Time</th>
+        <th scope="col">Arrival Time</th>
+        <th scope="col">Fare</th>
+        <th scope="col">Action</th>
 
-    <table class="table table-bordered table-hover table-striped">
-        <thead style="background:darkgrey">
-            <td>Bus Id</td>
-            <td>Bus Type</td>
-            <td>Source</td>
-            <td>Destination</td>
-            <td>Departure Time</td>
-            <td>Arrival Time</td>
-            <td>Fare</td>
-            <td>Action</td>
-        </thead>
-        <tbody>
-            <tr  *ngFor="let b of buses | async" scope="row">
-                <td>{{ b.id}}</td>
-                <td>{{ b.busType }}</td>
-                <td>{{ b.departureLocation }}</td>
-                <td>{{ b.arrivalLocation }}</td>
-                <td>{{ b.departureTime }}</td>
-                <td>{{ b.arrivalTime }}</td>
-                <td>{{ b.price}}</td>
-                <td>
-                    <button (click)="busDetails(b.id)" class="btn btn-info" style="margin-left: 10px">Details</button>  
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of buses | async">
+       
+        <th scope="row">{{ s.id }}</th>
+        <td>{{ s.busType }}</td>
+        <td>{{ s.departureLocation }}</td>
+        
+        <td>{{s.arrivalLocation}}</td>
+        <td>{{ s.departureTime }}</td>
+        <td>{{ s.arrivalTime  }}</td>
+        <td>{{ s.price }}</td>
+        <td>
+            <button id="bt1" (click)="busDetails(s.id)" class="btn btn-info" style="margin-left: 10px">Details</button>  
 
-                <button (click)="editBus(b.id)" class="btn btn-secondary" style="margin-left: 10px">Update</button>
+           
+            
+        <button id="bt2" (click)="editBus(s.id)" class="btn btn-secondary" style="margin-left: 10px">Update</button>
 
-                <button (click)="deleteBus(b.id)" class="btn btn-danger" style="margin-left: 30px">Delete</button>
+        <button id="bt3" (click)="deleteBus(s.id)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
 
-                </td>
-            </tr>
-        </tbody>
-    </table>
+        </td>
+      </tr>
+     
+    </tbody>
+  </table>

@@ -29,7 +29,14 @@ import { UnauthorizedBookingComponent } from './unauthorized-booking/unauthorize
 import { UnauthorizeduserPaymentComponent } from './unauthorizeduser-payment/unauthorizeduser-payment.component';
 import { CancelUnauthorizedBookingComponent } from './cancel-unauthorized-booking/cancel-unauthorized-booking.component';
 import { BooknewticketComponent } from './booknewticket/booknewticket.component';
-
+import { UanuthorizeSeatSelectionComponent } from './uanuthorize-seat-selection/uanuthorize-seat-selection.component';
+import { UnauthorizeTicketComponent } from './unauthorize-ticket/unauthorize-ticket.component';
+import { PaymentapprovedComponent } from './paymentapproved/paymentapproved.component';
+import { TermsComponent } from './terms/terms.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { ShowunauthorizedbookingsComponent } from './showunauthorizedbookings/showunauthorizedbookings.component';
+import { InactivecustomersComponent } from './inactivecustomers/inactivecustomers.component';
+import { ProfitsComponent } from './profits/profits.component';
 
 
 
@@ -57,12 +64,21 @@ const routes: Routes = [
   { path: 'showfeedbacks',component:ShowfeedbacksComponent},
   { path: 'payment/:id/:user',component:PaymentComponent},
   { path: 'cancelbooking',component:CancelbookingComponent},
-  { path: 'paymentdone',component:PaymentDoneComponent},
+  { path: 'payment-done',component:PaymentDoneComponent},
   { path: 'welcomeadmin', component: WelcomeadminComponent},
   { path: 'unbooking/:id', component:UnauthorizedBookingComponent},
   { path: 'unauthbook/:id',component:UnauthorizeduserPaymentComponent},
   { path:'cancel',component:CancelUnauthorizedBookingComponent},
-  { path:'booknew',component:BooknewticketComponent},
+  { path:'booknew/:id',component:BooknewticketComponent},
+  {path:'unauthseat/:id',component:UanuthorizeSeatSelectionComponent},
+  {path:'unauthticket',component:UnauthorizeTicketComponent},
+  {path: 'paymentapproved', component: PaymentapprovedComponent},
+  { path: 'privacy', component: PrivacyComponent},
+  { path: 'terms', component: TermsComponent},
+  { path: 'showunauthorizedbookings', component: ShowunauthorizedbookingsComponent},
+  { path: 'inactivecustomers', component: InactivecustomersComponent},
+  { path: 'profits', component: ProfitsComponent},
+
   
   
 ];

@@ -38,6 +38,14 @@ import { UnauthorizedBookingComponent } from './unauthorized-booking/unauthorize
 import { UnauthorizeduserPaymentComponent } from './unauthorizeduser-payment/unauthorizeduser-payment.component';
 import { CancelUnauthorizedBookingComponent } from './cancel-unauthorized-booking/cancel-unauthorized-booking.component';
 import { BooknewticketComponent } from './booknewticket/booknewticket.component';
+import { UanuthorizeSeatSelectionComponent } from './uanuthorize-seat-selection/uanuthorize-seat-selection.component';
+import { UnauthorizeTicketComponent } from './unauthorize-ticket/unauthorize-ticket.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { TermsComponent } from './terms/terms.component';
+import { PaymentapprovedComponent } from './paymentapproved/paymentapproved.component';
+import { ShowunauthorizedbookingsComponent } from './showunauthorizedbookings/showunauthorizedbookings.component';
+import { InactivecustomersComponent } from './inactivecustomers/inactivecustomers.component';
+import { ProfitsComponent } from './profits/profits.component';
 
 
 @NgModule({
@@ -73,6 +81,14 @@ import { BooknewticketComponent } from './booknewticket/booknewticket.component'
     UnauthorizeduserPaymentComponent,
     CancelUnauthorizedBookingComponent,
     BooknewticketComponent,
+    UanuthorizeSeatSelectionComponent,
+    UnauthorizeTicketComponent,
+    PrivacyComponent,
+    TermsComponent,
+    PaymentapprovedComponent,
+    ShowunauthorizedbookingsComponent,
+    InactivecustomersComponent,
+    ProfitsComponent,
   ],
   imports: [
     BrowserModule,
