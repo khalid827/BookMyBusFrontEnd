@@ -34,15 +34,11 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
 
     this.registerForm = this.formBuilder.group({
-      arrivalLocation: ['',[ Validators.required,Validators.pattern('^[a-zA-Z]+$')]],
-      departureLocation: ['',[ Validators.required,Validators.pattern('^[a-zA-Z]+$')]],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
+      departureLocation: ['', [Validators.required]],
+      arrivalLocation: ['', [Validators.required]],
       date: ['', [Validators.required]],
-      phoneNo:  ['', [Validators.required]],
-      street:  ['', [Validators.required]],
-      city:  ['', [Validators.required]],
-      passengers:  ['', [Validators.required]],});
+
+      });
   }
 
   // convenience getter for easy access to form fields
@@ -62,14 +58,16 @@ export class HomeComponent implements OnInit {
     this.bus=this.registerForm.value;
 
     //stop the process here if form is invalid
-    //if (this.registerForm.invalid) {
-     //   return;
-    //}
+    if (this.registerForm.invalid) {
+        return;
+    }
 
   
     this.search();
   
   }
+
+  
 
   search() {
     alert(" from "+this.bus.departureLocation+" to "+this.bus.arrivalLocation+" "+this.bus.date);

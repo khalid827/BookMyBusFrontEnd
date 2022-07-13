@@ -1,1 +1,28 @@
-<p>showunauthorizedbookings works!</p>
+<div class="col-md-9 offset-md-2 card card-body mt-3">
+    <table class="table table-bordered table-hover table-striped">
+        <thead style="background:darkgrey">
+            <td>Booking Id</td>
+            <td>Email</td>
+            <td>Booking Date</td>
+            <td>Passenger Name</td>
+            <td>Source</td>
+            <td>Destination</td>
+            <td>Bus Type</td>
+            <td>Fare</td>
+            
+        </thead>
+        <tbody>
+            <tr *ngFor="let book of bookinglist|async">
+                <td>{{ book.id}}</td>
+                <td>{{book.email}}</td>
+                <td>{{ book.dateOfBooking}}</td>
+                <td>{{ book.passengerName}}</td>
+                <td>{{ book.departureLocation}}</td>
+                <td>{{ book.arrivalLocation}}</td>
+                <td>{{ book.busType}}</td>
+                <td>{{ book.totalCost}}</td>
+                
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -18,6 +18,7 @@ export class UnauthorizeduserpaymentService {
 
   baseUrl='http://localhost:9090/bus/unauthorize/book';
   baseUrl1='http://localhost:9090/bus/unauthorize/latestbooking';
+  baseUrl2='http://localhost:9090/bus/unauthorize/book';
 
   constructor(private http:HttpClient) { }
 
@@ -33,6 +34,11 @@ export class UnauthorizeduserpaymentService {
   getLatest():Observable<any>
   {
     return this.http.get(`${this.baseUrl1}`);
+  }
+
+  getAllBookings():Observable<any>
+  {
+    return this.http.get(`${this.baseUrl2}`);
   }
 
 }

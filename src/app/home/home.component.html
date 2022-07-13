@@ -5,11 +5,13 @@
    <div class="col-4"  id="search">
         <h1 class="h1 text-center">Search for buses</h1>
            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+            
   
                <div class="form-group">
                  <label>Source</label>
-                 <select class="custom-select d-block w-100" class="form-select" formControlName="departureLocation" [ngClass]="{ 'is-invalid': submitted && f.source.errors }">
-                     <option value="">select</option>
+                 <select class="custom-select d-block w-100" class="form-select" formControlName="departureLocation" [ngClass]="{ 'is-invalid': submitted && f.departureLocation.errors }">
+                     <option value="">Select departure location</option>
                      <option *ngFor="let city of City" [ngValue]="city">{{city}}</option>
                   </select>
                  <div *ngIf="submitted && f.departureLocation.errors" class="invalid-feedback">
@@ -19,8 +21,8 @@
   
              <div class="form-group">
                  <label>Destination</label>
-                 <select class="custom-select d-block w-100" class="form-select" formControlName="arrivalLocation" [ngClass]="{ 'is-invalid': submitted && f.destination.errors }">
-                     <option value="">select</option>
+                 <select class="custom-select d-block w-100" class="form-select" formControlName="arrivalLocation" [ngClass]="{ 'is-invalid': submitted && f.arrivalLocation.errors }">
+                     <option value="">Select arrival Location</option>
                      <option *ngFor="let city of City" [ngValue]="city">{{city}}</option>
                   </select>
                  <div *ngIf="submitted && f.arrivalLocation.errors" class="invalid-feedback">

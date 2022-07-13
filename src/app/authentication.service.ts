@@ -75,12 +75,12 @@ export class AuthenticationService {
     return this.http.put(`${this.baseUrl4}/${email}`,value)
   }
 
-  inactiveUsers()
+  inactiveUsers():Observable<any>
   {
     return this.http.get(`${this.baseUrl5}`)
   }
 
-  getProfit()
+  getProfit():Observable<any>
   {
     return this.http.get(`${this.baseUrl6}`)
   }
