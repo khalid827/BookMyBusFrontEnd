@@ -1,14 +1,13 @@
+<div  class="row" >
+  <div class="col-7">>
+<img  src="https://i.etsystatic.com/8271236/r/il/cc9d89/1682586494/il_fullxfull.1682586494_qdvs.jpg" style="width: 1200px; margin-left: -100px; margin-top: -300px">
+</div>
 
-
-
-
-<div class="card mb-3" style="width: 18rem;">
+<div class="col-4; card mb-10; shadow-lg p-3 mb-5 bg-white rounded" style="width: 25rem; height: 12rem; background-image: linear-gradient(to left, rgba(49, 165, 176, 0), rgb(198, 233, 231));" >
   <img class="card-img-top" src="https://img.freepik.com/free-vector/bus-driver-concept-illustration_114360-6330.jpg?w=2000" class="card-img-top" alt="...">
   <div class="card-body" *ngIf="bus">
     <h5 class="card-title">Bus Details</h5>
     <p class="card-text">This bus departs from "{{bus.departureLocation}}" on {{bus.date}} and arrives at  "{{bus.arrivalLocation}}".</p>
-  </div>
-  <ul class="list-group list-group-flush">
     <li class="list-group-item">Bus ID: {{bus.id}}</li>
     <li class="list-group-item">Bus No: {{bus.busNo}}</li>
     <li class="list-group-item">Departure Time: {{bus.departureTime}}</li>
@@ -17,12 +16,14 @@
     <li class="list-group-item">Fare: {{bus.price}}</li>
     <li class="list-group-item">Seats Available: {{bus.seatsAvailable}}</li>
     <li class="list-group-item">Driver Contact:  {{bus.driverContact}}</li>
-  </ul>
-  <div class="card-body">
     <a routerLink="/showbuses" class="card-link">Back to bus list</a>
-    
+  </div> 
+  
   </div>
 </div>
+
+
+
 
 
 

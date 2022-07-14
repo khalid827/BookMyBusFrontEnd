@@ -1,4 +1,6 @@
-<table class="table table-borderless" id="borders">
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<h5  class="text-center h1 fw-bold mb-15 text-dark" style="font-family: Georgia, 'Times New Roman', Times, serif; background-image: linear-gradient(to left, rgba(49, 165, 176, 0), rgb(198, 233, 231));" >BUSES DASHBOARD</h5>
+<table class="table table-borderless" id="borders" class="shadow-lg p-3 mb-5 bg-white rounded" style="background-image: linear-gradient(to left, rgba(49, 165, 176, 0), rgb(198, 233, 231));">
     <thead class="thead-primary">
       <tr>
         <th scope="col"> Bus Id</th>
@@ -28,9 +30,10 @@
 
            
             
-        <button id="bt2" (click)="editBus(s.id)" class="btn btn-secondary" style="margin-left: 10px">Update</button>
+        <button id="bt2" (click)="editBus(s.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+        
 
-        <button id="bt3" (click)="deleteBus(s.id)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+        <button id="bt3" (click)="deleteBus(s.id)" class="btn btn-info" style="margin-left: 10px">Delete</button>
 
         </td>
       </tr>

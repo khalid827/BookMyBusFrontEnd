@@ -5,5 +5,14 @@
 }
 
 #grad {
-   background-image: linear-gradient(to right, rgba(215, 204, 205, 0), rgb(1, 28, 27));
+   background-image: url('https://static.vecteezy.com/system/resources/previews/001/483/028/original/gradient-colorful-abstract-background-free-vector.jpg');
+   height:650px;
+   margin-top:-40px;
+   margin-bottom: -40px;
+   margin-left:-20px;
+   margin-right:-20px;
+   
+ }
+ img{
+   border-radius: 300px;
  }

@@ -1,3 +1,4 @@
+
 #borders{
    
     margin-top: 2%;
@@ -8,33 +9,9 @@
   
   }
   thead{
-      background-color:blue;
+    background-color: rgb(74, 182, 182);
       color: whitesmoke;
       border-radius: 10px;
   }
 
-  #bt2{
-  
-  
-  background-color: rgb(234, 32, 140);
-
-  
-   
-  
-  }
-
-  #bt1{
-    
-   
-    background-color:cadetblue;
-    
-   }
-   
-  
-
-  #bt3{
-  
-  
-    background-color:indianred;
-    
-   }
+ 

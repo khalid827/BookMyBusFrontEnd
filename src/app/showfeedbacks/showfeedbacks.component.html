@@ -1,38 +1,39 @@
+<h5  class="text-center h1 fw-bold mb-15 text-dark" style="font-family: Georgia, 'Times New Roman', Times, serif; background-image: linear-gradient(to left, rgba(49, 165, 176, 0), rgb(198, 233, 231));" >FEEDBACKS DASHBOARD</h5>
 <section class="vh-100">
-    <div class="container py-5 h-100">
-      <div class="row d-flex align-items-center justify-content-center h-100">
-  
-        <div class="col-md-8 col-lg-7 col-xl-6" style="margin-top: -250px;">
-          <img style="width: 3000px; height: 700px " src="https://static.vecteezy.com/system/resources/previews/001/879/587/non_2x/fill-in-choices-in-an-exam-or-survey-make-the-right-choice-to-get-business-solutions-and-feedback-illustration-concept-for-landing-page-web-ui-banner-flyer-poster-template-background-free-vector.jpg"
-            class="img-fluid" alt="Phone image">
-        </div>
-  
-  <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1  card card-body mt-3" id="card">
-  <table class="table table-borderless" id="borders">
-      <thead class="thead-primary">
-        <tr>
-          <th scope="col">S.No</th>
-          <th scope="col">Email</th>
-          <th scope="col">Feedback</th>
-         
-          
+  <div class="container py-5 h-100">
+    <div class="row d-flex align-items-center justify-content-center h-100">
+
+      <div class="col-md-8 col-lg-7 col-xl-6" style="margin-top: -180px;">
+        <img style="width: 4000px; height: 550px " src="http://unblast.com/wp-content/uploads/2020/10/Online-Feedback-Vector-Illustration.jpg"
+          class="img-fluid" alt="Phone image">
+      </div>
+
+<div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1 ">
+<table class="table table-borderless shadow-lg p-3 mb-5 bg-white rounded" id="borders" style="margin-top: -190px ; background-image: linear-gradient(to left, rgba(49, 165, 176, 0), rgb(198, 233, 231));">
+    <thead class="thead-primary">
+      <tr>
+        <th scope="col">S.No</th>
+        <th scope="col">Email</th>
+        <th scope="col">Feedback</th>
+       
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let u of showallfeedback|async;let i=index">
+       
+        <td scope="row">{{i+1}}</td>
+        <td>{{ u.email}}</td>
+        <td>{{ u.comments }}</td>
+        
+       
         </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let u of showallfeedback|async;let i=index">
-         
-          <td scope="row">{{i+1}}</td>
-          <td>{{ u.email}}</td>
-          <td>{{ u.comments }}</td>
-          
-         
-          </tr>
-          </tbody>
-          </table>
-          </div>
-          </div>
-  
+        </tbody>
+        </table>
         </div>
-     
-    
-  </section>
+        </div>
+
+      </div>
+   
+  
+</section>

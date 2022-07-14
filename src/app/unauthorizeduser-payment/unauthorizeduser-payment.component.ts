@@ -47,7 +47,7 @@ export class UnauthorizeduserPaymentComponent implements OnInit {
 
     this.payment.postBooking(this.id,this.book)
       .subscribe(data => console.log(data), error => console.log(error));
-    alert("payment")
+    alert("Unauthorized User Payment Successfull")
     this.book = new Unauthorizeduser();
     this.reloadData();
   }

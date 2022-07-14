@@ -1,19 +1,19 @@
 <div id="cancel">
-  <div class="card mb-8" style="max-width: 900px;">
+  <div class="card mb-8" style="max-width: 900px;" class="shadow-lg p-3 mb-5 bg-white rounded">
     <div class="row no-gutters">
-      <div class="col-md-6">
-        <img src="https://cdn.dribbble.com/users/2424687/screenshots/6628571/free_cancellation-01_4x.png?compress=1&resize=1000x750&vertical=top" class="card-img" alt="...">
+      <div class="col-md-6" >
+        <img src="https://cdn.dribbble.com/users/2424687/screenshots/6628571/free_cancellation-01_4x.png?compress=1&resize=1000x750&vertical=top" class="card-img"  alt="...">
       </div>
-      <div class="col-md-6">
-        <div class="card-body">
-          <h2 class="card-title">Cancel Booking</h2>
+      <div class="col-md-6" style="background-image: linear-gradient(to left, rgba(49, 165, 176, 0), rgb(198, 233, 231));">
+        <div class="card-body text-center" style="margin-top: 30px;">
+          <h5  class="text-center h2 fw-bold mb-15 text-dark" style="font-family: Georgia, 'Times New Roman', Times, serif;" >CANCEL BOOKING</h5>
           <div [hidden]="submitted" style="width: 400px;">
             <form (ngSubmit)="onSubmit()" ngNativeValidate>
               
-      
+              <br><br>
               <div class="form-group">
-                  <label for="name">Booking Id</label>
-                  <input type="text" class="form-control" id="id" required [(ngModel)]="bookings.id" name="id">
+                  <label for="name">Booking ID (Printed on ticket)</label>
+                  <input type="text" class="form-control" id="id" placeholder="Enter your Booking ID" required [(ngModel)]="bookings.id" name="id">
               </div>
            
               
