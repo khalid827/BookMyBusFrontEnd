@@ -44,7 +44,7 @@ export class CancelbookingComponent implements OnInit {
           this.reloadData();
         },
         error => console.log(error));
-        alert('successfully cancelled');
+        alert('Successfully Cancelled. The Refund will be processed in 3-5 working days.');
   
 }
 onSubmit() {

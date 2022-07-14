@@ -25,7 +25,7 @@ export class CancelUnauthorizedBookingComponent implements OnInit {
           
         },
         error => console.log(error));
-        alert('successfully cancelled');
+        alert('Successfully Cancelled. The Refund will be processed in 3-5 working days.');
   
 }
 

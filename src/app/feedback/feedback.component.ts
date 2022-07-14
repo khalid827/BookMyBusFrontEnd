@@ -32,6 +32,8 @@ export class FeedbackComponent implements OnInit {
     this.submitted = true;
     this.save();   
     alert("Successfully Submitted Feedback") 
+    this.router.navigate(['/home']);
+
   }
   
 

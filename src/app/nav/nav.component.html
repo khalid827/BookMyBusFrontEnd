@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md  navbar-light bg-dark" >
   <!-- Links -->
   <a class="navbar-brand" routerLink="/">
-    <img src="/assets/images/nobg3.png" height="60" width="90" >
+    <img src="/assets/images/nobg4.png" height="70" width="100" style="padding-left: 25px;" >
 </a>
 
     <ul class="navbar-nav mx-auto">
@@ -29,9 +29,7 @@
         <a *ngIf="!loginService.isUserLoggedIn()  && !loginService.isAdminLoggedIn()" routerLink="login" class="clickme info" routerLinkActive="active">User Login</a>
       </li>
 
-      <li class="nav-item">
-        <a *ngIf="!loginService.isUserLoggedIn() && !loginService.isAdminLoggedIn()" routerLink="booknew" class="clickme info" routerLinkActive="active">New Booking</a>
-      </li>
+      
 
       <li class="nav-item">
         <a  *ngIf="!loginService.isUserLoggedIn() && !loginService.isAdminLoggedIn()" routerLink="cancel" class="clickme info" routerLinkActive="active">Cancel booking</a>
