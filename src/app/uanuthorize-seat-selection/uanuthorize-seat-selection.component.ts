@@ -47,7 +47,7 @@ export class UanuthorizeSeatSelectionComponent implements OnInit {
   }
 
   color(st:number){
-    return 'skyblue';
+    return 'light-pink';
   }
   
   

@@ -18,9 +18,19 @@ export class RegisterComponent implements OnInit {
 
   City: any = ['Bangalore','Chennai', 'Delhi', 'Kolkatta','Mumbai']
 
-  constructor(private busservice:AuthenticationService,private router:Router) { }
+  constructor(private formBuilder: FormBuilder,private busservice:AuthenticationService,private router:Router) { }
 
   ngOnInit(): void {
+    this.registerForm = this.formBuilder.group({
+      email: ['', [Validators.required, Validators.email]],
+      name: ['', [Validators.required, Validators.pattern('^[a-zA-Z]+$')]],
+      password: ['', [Validators.required, Validators.minLength(6) ]],
+      dob: ['', [Validators.required]],
+      phoneNo: ['', [Validators.required]],
+      });
+    
+    
+    
   }
 
   get f() { return this.registerForm.controls; }
@@ -40,6 +50,11 @@ export class RegisterComponent implements OnInit {
  
   onSubmit() {
     this.submitted = true;
+    this.userdetails=this.registerForm.value;
+    if (this.registerForm.invalid) {
+      return;
+  }
+
     this.save();    
   }
  

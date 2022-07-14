@@ -4,3 +4,6 @@
    margin-left: 181px;
 }
 
+#grad {
+   background-image: linear-gradient(to right, rgba(215, 204, 205, 0), rgb(1, 28, 27));
+ }

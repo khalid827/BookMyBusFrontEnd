@@ -1,28 +1,26 @@
-<div class="col-md-9 offset-md-2 card card-body mt-3">
-    <table class="table table-bordered table-hover table-striped">
-        <thead style="background:darkgrey">
-            <td>Booking Id</td>
-            <td>Email</td>
-            <td>Booking Date</td>
-            <td>Passenger Name</td>
-            <td>Source</td>
-            <td>Destination</td>
-            <td>Bus Type</td>
-            <td>Fare</td>
+<table class="table table-borderless" id="borders">
+    <thead class="thead-primary">
+        <th scope="col">Booking Id</th>
+        <th scope="col">Email</th>
+        <th scope="col">Booking Date</th>
+        <th scope="col">Passenger Name</th>
+        <th scope="col">Source</th>
+        <th scope="col">Destination</th>
+        <th scope="col">Bus Type</th>
+        <th scope="col">Fare</th>
+        
+    </thead>
+    <tbody>
+        <tr *ngFor="let book of bookinglist|async">
+            <th scope="col">{{ book.id}}</th>
+            <td>{{book.email}}</td>
+            <td>{{ book.dateOfBooking}}</td>
+            <td>{{ book.passengerName}}</td>
+            <td>{{ book.departureLocation}}</td>
+            <td>{{ book.arrivalLocation}}</td>
+            <td>{{ book.busType}}</td>
+            <td>{{ book.totalCost}}</td>
             
-        </thead>
-        <tbody>
-            <tr *ngFor="let book of bookinglist|async">
-                <td>{{ book.id}}</td>
-                <td>{{book.email}}</td>
-                <td>{{ book.dateOfBooking}}</td>
-                <td>{{ book.passengerName}}</td>
-                <td>{{ book.departureLocation}}</td>
-                <td>{{ book.arrivalLocation}}</td>
-                <td>{{ book.busType}}</td>
-                <td>{{ book.totalCost}}</td>
-                
-            </tr>
-        </tbody>
-    </table>
-</div>
+        </tr>
+    </tbody>
+</table>

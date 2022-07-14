@@ -39,14 +39,16 @@ p {
     height: 70px;
     display: flex;
     align-items: center;
+    text-align: center;
     justify-content: space-between;
     padding: 0 15px;
-    background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%);
+    background-image: linear-gradient(to right, #041121 0%, #79CBCA 51%, #77A1D3 100%);
     border: none;
     transition: 0.5s;
     background-size: 200% auto;
 
 }
+
 
 
 .btn.btn.btn-primary:hover {
@@ -64,7 +66,7 @@ p {
 
 .form-control {
     color: white;
-    background-color: #223C60;
+    background-color: #6ad3ed;
     border: 2px solid transparent;
     height: 60px;
     padding-left: 20px;
@@ -74,7 +76,7 @@ p {
 .form-control:focus {
     color: white;
     background-color: #0C4160;
-    border: 2px solid #2d4dda;
+    border: 2px solid #050e37;
     box-shadow: none;
 }
 
@@ -89,5 +91,11 @@ p {
 }
 #pay
 {
-    margin:50px;
+    margin-left:500px;
+    margin-top:-470px;
+   
+}
+img{
+    margin-left: 150px;
+    margin-top:50px;
 }

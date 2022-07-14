@@ -1,0 +1,14 @@
+#borders{
+    margin-left: 15%;
+   
+    margin-top: 2%;
+     width: 70%;
+     border-radius: 100px;
+      
+  
+  }
+  thead{
+      background-color: rgb(5, 74, 74);
+      color: whitesmoke;
+      border-radius: 10px;
+  }

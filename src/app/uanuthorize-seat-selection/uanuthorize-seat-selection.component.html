@@ -1,9 +1,16 @@
-<div class="bus w-400px rounded rounded-20">
-    <div class="cockpit">
-      <h1>Please select a seat</h1>
+<section  style="margin-top: -50px;"    class="vh-100">
+  <div class="container py-5 h-100">
+    <h2 style="margin-left:70px; font-family: Georgia, 'Times New Roman', Times, serif;" >Please Select a Seat</h2>
+    <div  class="row d-flex align-items-center justify-content-center h-100">
+     
+   
+        
+          <div class="bus w-400px rounded rounded-20"  >
+    <div class="cockpit" style="border-radius:1000px;" >
+     <br> 
     </div>
     <ol  class="cabin d-flex flex-wrap">
-          <li class="seat"  style="min-width: 80px;" *ngFor="let st of seats" >
+          <li class="seat"  style="min-width: 80px; " *ngFor="let st of seats" >
            <label [ngStyle]="{'background-color': color(st) }">
               <input type="checkbox" name="seat"   (click)="pushCheckBoxValue(st)" />
             {{st}}
@@ -14,7 +21,16 @@
         <a>
         </a>
         <li class="list list-unstyled">
-            <input type="submit" (click)="onSubmit()" class="btn btn-sm btn-success" value="Book-Ticket"/>
+            <input type="submit" style="background-color: white; margin-left: 100px;"     (click)="onSubmit()" class="btn btn-sm " value="Book-Ticket"/>
       </li>
       
     </div>
+   
+ <div class="col-md-8 col-lg-7 col-xl-6">
+        <img style="width: 1000px; height:500px; " src="assets/images/seatbook.jpg"
+
+          class="img-fluid" alt="Phone image">
+      </div>
+  </div>
+  </div>
+</section>
