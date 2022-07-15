@@ -15,7 +15,7 @@
                      <option *ngFor="let city of City" [ngValue]="city">{{city}}</option>
                   </select>
                  <div *ngIf="submitted && f.departureLocation.errors" class="invalid-feedback">
-                     <div *ngIf="f.departureLocation.errors.required">Street is required</div>
+                     <div *ngIf="f.departureLocation.errors.required">Source is required</div>
                  </div>
              </div>
   
@@ -26,7 +26,7 @@
                      <option *ngFor="let city of City" [ngValue]="city">{{city}}</option>
                   </select>
                  <div *ngIf="submitted && f.arrivalLocation.errors" class="invalid-feedback">
-                     <div *ngIf="f.arrivalLocation.errors.required">Street is required</div>
+                     <div *ngIf="f.arrivalLocation.errors.required">Destination is required</div>
                  </div>
              </div>
   

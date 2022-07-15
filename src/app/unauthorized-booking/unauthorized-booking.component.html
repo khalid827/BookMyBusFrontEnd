@@ -1,42 +1,78 @@
-<section style="margin-top: -5%;" class="vh-100">
-  <div class="container py-5 h-100">
-    <div class="row d-flex align-items-center justify-content-center h-100">
-      <div class="col-md-8 col-lg-7 col-xl-6">
-        <img style="height:500px; width: 600px; border-radius: 50%;" src="https://img.freepik.com/free-vector/realistic-touristic-bus-illustration_98292-124.jpg?1&t=st=1657788809~exp=1657789409~hmac=168930deed616c4a812dd2f999f1dca87d05dc807503d21e6184ba0b3a731ae9&w=740"
-          class="img-fluid" alt="Phone image">
-      </div>
-      <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-        
-          <h1 class="text-center">Booking</h1>
+<div class="col-md-8 col-lg-7 col-xl-6">
+  
+  <div class="col-md-8 col-lg-7 col-xl-6">
+    <img style=" border-radius: 100%; height: 400px; width: 400px; padding-right: 100x;" src="https://img.freepik.com/free-vector/realistic-touristic-bus-illustration_98292-124.jpg?1&t=st=1657788809~exp=1657789409~hmac=168930deed616c4a812dd2f999f1dca87d05dc807503d21e6184ba0b3a731ae9&w=740"
+      class="img-fluid" alt="Phone image">
+  </div>
+</div>
+<div id="pay">
+<div class="container p-0; "  style="text-align: 2000; ">
+  <div class="card px-4; shadow-lg p-3 mb-5 bg-white rounded" style="margin-left: 400px; margin-top: 70px;">
+    <h5  class="text-center h3 fw-bold mb-15 text-dark" style="font-family: Georgia, 'Times New Roman', Times, serif;" >BOOKING DETAILS</h5>
+    <br>  
+    <div [hidden]="submitted" >
+      <form (ngSubmit)="onSubmit()" ngNativeValidate>
+      <div class="row gx-3" >
+          <div class="col-12">
+              <div class="d-flex flex-column">
+                <label for="name" class="text mb-1">Passenger Name</label>
+                <input type="text" class="form-control" id="passengerName" required [(ngModel)]="booking.passengerName" name="passengerName">
+              </div>
+          </div>
+
+          <div class="col-12">
+            <div class="d-flex flex-column">
+              <label for="name" class="text mb-1">Passenger Email</label>
+              <input type="text" class="form-control" id="email" required [(ngModel)]="booking.email" name="email">
+            </div>
+        </div>
           
-            <div class="card-body">
-              <form (ngSubmit)="onSubmit()" ngNativeValidate>
-                <div class="form-group">
-                  <label for="name">Passenger Name</label>
-                  <input type="text" class="form-control" id="passengerName" required [(ngModel)]="booking.passengerName" name="passengerName">
-                </div>
-             
-                <div class="form-group">
-                    <label for="name">Number of Seats</label>
-                    <input type="text" class="form-control" id="numberOfseats" required [(ngModel)]="booking.numberOfseats" name="numberOfseats">
-                  </div>
-             
-                  <div class="form-group">
-                    <label for="name">Phone no</label>
-                    <input type="text" class="form-control" id="phoneNumber" required [(ngModel)]="booking.phoneNumber" name="phoneNumber">
-                  </div>
-            
-                  <div class="form-group">
-                    <label for="name">Email</label>
-                    <input type="text" class="form-control" id="email" required [(ngModel)]="booking.email" name="email">
-                  </div>
-             <br>
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                
-              </form>  
-        
-      </div>
+          <div class="col-6">
+              <div class="d-flex flex-column">
+                <label for="name" class="text mb-1">Phone no.</label>
+                <input type="text" class="form-control" id="phoneNumber" required [(ngModel)]="booking.phoneNumber" name="phoneNumber">
+              </div>
+          </div>
+          <div class="col-6">
+            <div class="d-flex flex-column">
+              <label for="name" class="text mb-1">Number of Seats</label>
+              <input type="text" class="form-control" id="numberOfseats" required [(ngModel)]="booking.numberOfseats" name="numberOfseats">
+            </div>
+        </div>
+          
+          
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary" >Submit</button>
+      </form>
     </div>
+
   </div>
-  </div>
-</section>
+</div>
+</div>        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       
+
+
+
+
+
+
+
+
+
+
+
+

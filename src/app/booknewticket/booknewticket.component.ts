@@ -48,7 +48,7 @@ export class BooknewticketComponent implements OnInit {
 
 
 color(st:number){
-  return 'skyblue';
+  return 'grey';
 }
 
 

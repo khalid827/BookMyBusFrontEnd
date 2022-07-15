@@ -3,10 +3,11 @@
     class="img-fluid" alt="Phone image">
 </div>
 <div id="pay">
-<div class="container p-0"  style="text-align: 2000;">
-  <div class="card px-4">
-      <p class="h8 py-3">Payment Details</p>
-      <div [hidden]="submitted" >
+<div class="container p-0; "  style="text-align: 2000; ">
+  <div class="card px-4; shadow-lg p-3 mb-5 bg-white rounded">
+    <h5  class="text-center h3 fw-bold mb-15 text-dark" style="font-family: Georgia, 'Times New Roman', Times, serif;" >PAYMENT DETAILS</h5>
+    <br>  
+    <div [hidden]="submitted" >
       <form (ngSubmit)="onSubmit()" ngNativeValidate>
       <div class="row gx-3" >
           <div class="col-12">
