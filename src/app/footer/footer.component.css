@@ -3,7 +3,17 @@ footer {
   background:black;
   padding: 10px 0;
   text-align: center;
+  position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   
+   color: white;
+   text-align: center;
 }
+
+
+
 footer a {
 
   color: white;
@@ -32,4 +42,3 @@ margin-right: 100px;
 margin-top: 0px;
 margin-left: 250px;
 }
-

@@ -8,6 +8,9 @@ import { AuthenticationService } from '../authentication.service';
 import { BusServiceService } from '../bus-service.service';
 
 import { BusDetails } from '../bus-details';
+import { Userdetails } from '../userdetails';
+
+
 
 @Component({
   selector: 'app-home',
@@ -18,7 +21,8 @@ export class HomeComponent implements OnInit {
 
 
 
-
+  email:string|any;
+  userprof:Userdetails|any;
   registerForm: FormGroup | any;
   submitted = false;
  
@@ -29,7 +33,7 @@ export class HomeComponent implements OnInit {
   constructor(private formBuilder: FormBuilder,
               private authenticationService: AuthenticationService,
               private bService: BusServiceService,
-              private router: Router) { }
+              private router: Router,public loginService:AuthenticationService) { }
 
   ngOnInit(): void {
 
@@ -39,6 +43,16 @@ export class HomeComponent implements OnInit {
       date: ['', [Validators.required]],
 
       });
+
+      this.userprof=new Userdetails();
+    
+      this.email=sessionStorage.getItem('username');
+  
+      this.authenticationService.userProfile(this.email)
+       .subscribe(data => {
+         console.log(data)
+         this.userprof = data;
+       }, error => console.log(error));
   }
 
   // convenience getter for easy access to form fields
